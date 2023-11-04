@@ -1,0 +1,168 @@
+decal DevScorch
+{
+	pic BFGLITE1
+	shade "ff 00 00"
+	fullbright
+	randomflipx
+	animator GoAway2
+	lowerdecal BFGScorch
+}
+
+decal LiteScorch
+{
+	pic BFGLITE1
+	shade "ff 00 00"
+	fullbright
+	randomflipx
+	animator GoAway2
+	x-scale 0.50
+        y-scale 0.50
+}
+
+decal LiteScorch
+{
+	pic BFGLITE1
+	shade "ff 00 00"
+	fullbright
+	randomflipx
+	animator GoAway2
+	lowerdecal BFGScorch
+        x-scale 0.50
+        y-scale 0.50
+}
+
+decal BFGLightning3
+{
+	pic BFGLITE1
+	shade "00 ff 00"
+	fullbright
+	randomflipx
+	animator GoAway2
+	lowerdecal BFGScorch
+}
+
+decal BFGLightning4
+{
+	pic BFGLITE2
+	shade "00 ff 00"
+	fullbright
+	randomflipy
+	animator GoAway2
+	lowerdecal BFGScorch
+}
+
+decalgroup DEBFGLightning
+{
+	BFGLightning3	1
+	BFGLightning4	1
+}
+
+Generator DevastatorBall                DevScorch
+Generator DevastatorBall2               DoomImpScorch
+Generator LiteShot                      LiteScorch
+
+decal RocketImpScorch
+{
+	pic SCORCH2
+	shade "00 00 00"
+	x-scale 0.75
+	y-scale 0.75
+	randomflipx
+	randomflipy
+}
+
+Decal RedRailScorchLower1
+{
+	Pic CBALSCR1
+	Shade "00 00 00"
+	X-Scale 0.1
+	Y-Scale 0.1
+	RandomFlipX
+	RandomFlipY
+}
+
+Decal RedRailScorchLower2
+{
+	Pic CBALSCR2
+	Shade "00 00 00"
+	X-scale 0.1
+	Y-scale 0.1
+	RandomFlipX
+	RandomFlipY
+}
+
+DecalGroup RedRailScorchLower
+{
+	RedRailScorchLower1 1
+	RedRailScorchLower2 1
+}
+
+
+
+Decal RedRailScorch1
+{
+	Pic CBALSCR1
+	Shade "56 00 00"
+	FullBright
+	X-Scale 0.2
+	Y-Scale 0.2
+	Animator GoAway
+	LowerDecal RedRailScorchLower
+}
+
+Decal RedRailScorch2
+{
+	Pic CBALSCR2
+	Shade "56 00 00"
+	FullBright
+	X-Scale 0.2
+	Y-Scale 0.2
+	Animator GoAway
+	LowerDecal RedRailScorchLower
+}
+
+DecalGroup RedRailScorch
+{
+	RedRailScorch1 1
+	RedRailScorch2 1
+}
+
+decal FFslimeScorch1
+{
+	pic FFSCR1
+	shade "bc f8 50"
+	x-scale 0.8
+	y-scale 0.8
+	randomflipx
+	randomflipy
+	fullbright
+}
+
+decal FFslimeScorch2
+{
+	pic FFSCR2
+	shade "bc f8 50"
+	x-scale 0.8
+	y-scale 0.8
+	randomflipx
+	randomflipy
+	fullbright
+}
+
+decal FFslimeScorch3
+{
+	pic FFSCR3
+	shade "bc f8 50"
+	x-scale 0.8
+	y-scale 0.8
+	randomflipx
+	randomflipy
+	fullbright
+}
+
+decalgroup FFslimeScorch
+{
+	FFslimeScorch1	1
+	FFslimeScorch2	1
+	FFslimeScorch3	1
+}

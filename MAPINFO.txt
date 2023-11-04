@@ -1,0 +1,11 @@
+Intermission Inter_Cast
+{
+	Image
+	{
+		// This is only here to initialize the background and the music
+		Background = "Graphics/CPD_END"
+		Time = -1
+		Music = "Music/HIDDENCT"
+	}
+	Link = Doom2Cast
+}

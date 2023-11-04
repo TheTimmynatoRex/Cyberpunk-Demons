@@ -1,0 +1,180 @@
+ACTOR CPDZombiemanSpawner : RandomSpawner replaces Zombieman
+{
+	DropItem "CPDCyberZombieman", 256, 120
+	DropItem "CPDRapidFireTrooper", 256, 20
+	DropItem "CPDPlasmaZombie", 256, 25
+	DropItem "CPDZombieScientistPlasma", 256, 15
+	DropItem "CPDZombieScientistHeadless", 256, 10
+	DropItem "CPDSonicRailgunZombie", 256, 4
+	DropItem "CPDShadowTrooper", 256, 10
+	DropItem "CPDRocketGuy", 256, 1
+}
+
+ACTOR CPDShotgunGuySpawner : RandomSpawner replaces ShotgunGuy
+{
+	DropItem "CPDShotgunTechnician", 256, 120
+	DropItem "CPDKarasawaGuy", 256, 5
+	DropItem "CPDZombieRailgunner", 256, 10
+	DropItem "CPDZSpecOps", 256, 15
+	DropItem "CPDASGGuy", 256, 4
+	DropItem "CPDSSGZombie", 256, 15
+	DropItem "CPDQuadShotgunZombie", 256, 1
+	DropItem "CPDNailborg", 256, 15
+	DropItem "CPDBeamGuy", 256, 10
+}
+
+ACTOR CPDChaingunnerSpawner : RandomSpawner replaces ChaingunGuy
+{
+	DropItem "CPDAssaultRifleCommando", 256, 120
+	DropItem "CPDMinigunner", 256, 10
+	DropItem "CPDChaingunGuy2", 256, 20
+	DropItem "CPDUberchain", 256, 5
+	DropItem "CPDNailborgCommando", 256, 15
+	DropItem "CPDRepeaterZombie", 256, 10
+	DropItem "CPDBFGGuy", 256, 4
+	DropItem "CPDDevastatorZombie", 256, 1
+}
+
+ACTOR CPDImpSpawner : RandomSpawner replaces DoomImp
+{
+	DropItem "CPDDarkImp", 256, 4
+	DropItem "CPDDevil", 256, 10
+	DropItem "CPDCyberImp", 256, 30
+	DropItem "CPDRocketImp", 256, 25
+	DropItem "CPDTechImp", 256, 100
+	DropItem "CPDCyberFodder", 256, 20
+	DropItem "CPDNeedlerImp", 256, 10
+	DropItem "CPDFusionCyberImp", 256, 1
+}
+
+ACTOR CPDPinkyDemonSpawner : RandomSpawner replaces Demon
+{
+	DropItem "CPDMechDemon", 256, 100
+	DropItem "CPDBloodFiend", 256, 10
+	DropItem "CPDCyberFiend", 256, 1
+	DropItem "CPDChaingunDemon", 256, 10
+	DropItem "CPDBlindMechDemon", 256, 15
+	DropItem "CPDCyberPinky", 256, 30
+	DropItem "CPDMetalDemon", 256, 20
+	DropItem "CPDSuicideBomber", 256, 4
+	DropItem "CPDIronDemon", 256, 10
+}
+
+ACTOR CPDSpectreSpawner : RandomSpawner replaces Spectre
+{
+	DropItem "CPDMechtre", 256, 100
+	DropItem "CPDBloodLurker", 256, 10
+	DropItem "CPDCyberLurker", 256, 1
+	DropItem "CPDChaingunSpectre", 256, 10
+	DropItem "CPDBlindMechtre", 256, 15
+	DropItem "CPDCyberSpectre", 256, 30
+	DropItem "CPDMetalSpectre", 256, 20
+	DropItem "CPDSpectralBomber", 256, 4
+	DropItem "CPDIronSpectre", 256, 10
+}
+
+ACTOR CPDLostSoulSpawner : RandomSpawner replaces LostSoul
+{
+	DropItem "CPDHellmine", 256, 1
+	DropItem "CPDArachnorb", 256, 25
+	DropItem "CPDJetpackZombie", 256, 24
+	DropItem "CPDBabyCaco", 256, 50
+	DropItem "CPDRoboSoul", 256, 100
+}
+
+ACTOR CPDCacodemonSpawner : RandomSpawner replaces Cacodemon
+{
+	DropItem "CPDCacoBot", 256, 100
+	DropItem "CPDCyberCaco", 256, 50
+	DropItem "CPDCacolantern", 256, 16
+	DropItem "CPDAbaddon", 256, 1
+	DropItem "CPDEnhancedCacodemon", 256, 33
+}
+
+ACTOR CPDPainElementalSpawner : RandomSpawner replaces PainElemental
+{
+	DropItem "CPDHellmineFurnace", 256, 1
+	DropItem "CPDCyberElemental", 256, 100
+	DropItem "CPDPlasmaElemental", 256, 50
+	DropItem "CPDDefiler", 256, 25
+	DropItem "CPDTorturedSoul", 256, 24
+}
+
+ACTOR CPDHellKnightSpawner : RandomSpawner replaces HellKnight
+{
+	DropItem "CPDCyberHellKnight", 256, 90
+	DropItem "CPDCybruiser", 256, 45
+	DropItem "CPDPyroDemon", 256, 10
+	DropItem "CPDCryoDemon", 256, 9
+	DropItem "CPDHellWarrior", 256, 35
+	DropItem "CPDLesserArchon", 256, 20
+//	DropItem "CPDPyrobruiser", 256, 1
+}
+
+ACTOR CPDBaronOfHellSpawner : RandomSpawner replaces BaronOfHell
+{
+	DropItem "CPDCyberBaron", 256, 90
+	DropItem "CPDCybruiserMkII", 256, 45
+	DropItem "CPDBruiserDemon", 256, 10
+	DropItem "CPDFrostBruiser", 256, 9
+	DropItem "CPDHellPaladin", 256, 35
+	DropItem "CPDGreaterArchon", 256, 20
+//	DropItem "CPDCybruiserMkIII", 256, 1
+}
+
+ACTOR CPDArachnotronSpawner : RandomSpawner replaces Arachnotron
+{
+	DropItem "CPDArachnotronMK2", 256, 100
+	DropItem "CPDFusionSpider", 256, 25
+	DropItem "CPDRailArachnotron", 256, 50
+	DropItem "CPDChaingunSpider", 256, 25
+}
+
+ACTOR CPDMancubusSpawner : RandomSpawner replaces Fatso
+{
+	DropItem "CPDVolacubus", 256, 100
+	DropItem "CPDPlasmaVolacubus", 256, 50
+	DropItem "CPDSlimeVolacubus", 256, 25
+	DropItem "CPDCyberMancubus", 256, 24
+	DropItem "CPDUltramanc", 256, 1
+}
+
+ACTOR CPDRevenantSpawner : RandomSpawner replaces Revenant
+{
+	DropItem "CPDBeamRevenant", 256, 1
+//	DropItem "CPDHeavyRevenant", 256, 1
+//	DropItem "CPDDraugr", 256, 1
+//	DropItem "CPDDeathIncarnate", 256, 1
+}
+
+ACTOR CPDArchVileSpawner : RandomSpawner replaces Archvile
+{
+	DropItem "CPDDiabolist", 256, 1
+//	DropItem "CPDTechVile", 256, 1
+//	DropItem "CPDHoloVile", 256, 1
+//	DropItem "CPDHellChaingunner", 256, 1
+}
+
+ACTOR CPDCyberdemonSpawner : RandomSpawner replaces Cyberdemon
+{
+	DropItem "CPDSuperdemon", 256, 80
+	DropItem "CPDEvolvedCyberdemon", 256, 35
+	DropItem "CPDAnnihilator", 256, 30
+	DropItem "CPDDarkCyberdemon", 256, 25
+	DropItem "CPDCardinal", 256, 15
+	DropItem "CPDTerminator", 256, 10
+//	DropItem "CPDDarkCardihilator", 256, 4
+//	DropItem "CPDCyberPrototypeX1", 256, 1
+}
+
+ACTOR CPDSpiderMastermindSpawner : RandomSpawner replaces SpiderMastermind
+{
+	DropItem "CPDArachnorbQueen", 256, 80
+	DropItem "CPDEvolvedMastermind", 256, 35
+	DropItem "CPDDemolisher", 256, 30
+	DropItem "CPDArachnophyte", 256, 25
+	DropItem "CPDCerebralSentient", 256, 20
+	DropItem "CPDCyberMastermind", 256, 5
+	DropItem "CPDSupremeFiend", 256, 4
+//	DropItem "CPDSpiderPrototypeX2", 256, 1
+}

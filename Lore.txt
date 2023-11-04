@@ -1,0 +1,198 @@
+Cyberpunk Demons
+
+Dedicated to Matthew Krehbiel AKA Ghastly_dragon (5/11/1990 - 21/11/2022)
+
+Main inspirations: DoomRL Arsenal Monster Pack (and its Technophobia difficulty), DoomN00b's Cyberpack, Shades of Doom, the few Cyberpunk-themed Doom mods (Lithium, WOOMY: Project Petersen, Cyberpunk 2177, etc.)
+
+Lore: 
+
+It's the year 2023. 50 years have passed since the release of The Exorcist. With the advancements of AI technology, a satanist cult named the Nostalgia Cult of Regan McNeil gathers the top hackers of the world to attempt to upload themselves into cyberspace and release demons onto the internet, causing all internet users to be possessed. However, the summoning ritual ended up being botched beyond belief, and something that's equally as terrible happened instead...
+
+A portal to Hell opens in Georgetown, in Washington DC. From there, many different kinds of demons, some of them equipped with cybernetics, poured out and started assaulting humans and turning them into possessed zombies, with their goal being to take over the world and wipe out humanity. The United States falls into an extreme civil war due to that incident, and society as a whole collapses around the world.
+
+John Romero, with the help of the US Army and Microsoft, starts recruiting many kinds of soldiers from around the world to join the army and fight against the demons, Doom-style. In this epic Cyberpunk-styled monster mod, you play as one of those recruited soldiers. You are tasked with eliminating as many demons you can find as possible, with the ultimate goal of assassinating the Nostalgia Cult's leaders and hopefully destroy Hell itself.
+
+Enemies: 
+
+Zombieman replacements: 
+
+Cyber-Zombieman: Your average rifle zombie, enhanced with cyberware. Has a chance that'll keep firing, but otherwise, it's the closest to its vanilla counterpart. Drops a clip on death. Has 30 HP.
+Rapid Fire Trooper: A zombie armed with a rifle and an itchy trigger finger. It'll not stop firing until the target is dead. Drops a clip on death and has 30 HP.
+Plasma Zombie: A zombie captain that's equipped with a plasma rifle that fires plasma balls repeatedly. Drops a cell on death and has 50 HP.
+Zombie Plasma Scientist: A possessed scientist from the UAC. It runs twice as fast, but its plasma pistol is weaker than the Plasma Zombie's. Drops a cell on death and has 50 HP.
+Headless Zombie Scientist: Cutting the head off wasn't enough. This scientist is somehow still alive and it's armed with a rapid-fire uzi that's wildly inaccurate. Drops a clip on death and has 40 HP.
+Sonic Railgun Zombie: Related to the Railgun Zombie mentioned below. Its railgun is weaker, but fires faster. It can also be charged to give off a more powerful shot. Drops a cell most of the time on death and has 60 HP.
+Shadow Trooper: Great. A silent, translucent zombie. It fires in bursts, and becomes fully visible every time it attacks or is in pain. Drops up to two clips and rarely a light amplification visor on death and has 60 HP.
+Rocket Zombie: A zombie armed with a deadly rocket launcher. Has a tendency of potentially killing itself and any demons surrounding it. Drops a rocket and rarely a rocket launcher on death and has 50 HP.
+
+Shotgun Guy replacements: 
+
+Shotgun Technician: A gateway technician that has been mutated by the demons. Its shotgun is twice as powerful as a normal Shotgun Guy. Drops a shotgun on death and has 50 HP.
+Karasawa Zombie: Armed with a special plasma rifle that fires ripping, ricocheting projectiles, this guy is not to be underestimated. Drops an energy cell on death and has 80 HP.
+Railgun Zombie: This zombie is armed with a railgun can deal tons of damage to you regardless of distance. Drops an energy cell on death and has 50 HP.
+Spec Ops Zombie: Special operation forces zombified by the demons. They manage to retain some combat intelligence, as compared to the other demons, these act rather unpredictably with their various modes. Drops a shotgun on death and has 100 HP.
+Auto-Shotgun Guy: A zombie equipped with an automatic shotgun, and will whittle you down with its rapid fire function. It needs to reload after 16 shots however. Drops some shells on death and has 90 HP.
+Super Shotgun Zombie: This zombie's equipped with a double-barreled shotgun, and will use its deadliness and stopping power to its advantage. Drops some shells and rarely a super shotgun on death and has 80 HP.
+Quad-Shotgun Guy: You thought the one above was bad? This bad boy comes with a QUAD-barreled shotgun! It fires either one barrel at a time, or all at once. Luckily, it needs to reload after 4 shots. Drops some shells on death and has 100 HP.
+Nailgun Cyborg: A robot zombie that can shoot nails from its gun, or shoot spheres that explode into nails in all directions. Drops a clip and some shells half the time on death and has 80 HP.
+Beam Zombie: This zombie is armed with a plasma beam weapon that fires near-instantly and deals tons of damage. Take cover if you find one of these. Drops a cell most of the time on death and has 80 HP.
+
+Chaingunner replacements: 
+
+Assault Rifle Commando: A zombie armed with a standard-issue assault rifle. It attacks half as fast as the vanilla Chaingunner, but it is still just as deadly. Drops a chaingun on death and has 75 HP.
+Minigunner: Armed with a minigun, this zombie attacks twice as fast as the vanilla Chaingunner. Drops a chaingun and a clip on death and has 80 HP.
+Dual Chaingun Major: You thought one chaingun was bad? How about two? It also fires slightly faster than normal to boot. Drops a chaingun on death and has 100 HP.
+Uber Chaingunner: Packed with armor and a super chaingun, this cybernetically-enhanced zombie fires so fast that it makes even the Minigunner seem like a cakewalk. Drops a chaingun on death and has 120 HP.
+Nailgun Cyborg Commando: This zombie is essentially an upgraded version of the Nailgun Cyborg that doesn't stop firing nails once it has a target in its line of sight. Drops a box of bullets and a box of shells half the time on death and has 100 HP.
+Repeater Zombie: A zombie armed with a rather interesting weapon. When it attacks, it rapid-fires hitscan explosive plasma bolts, but after some time, it needs to cool down. Drops an energy cell pack and rarely a plasma rifle on death and has 100 HP.
+BFG Commando: Because the zombies have to get every weapon under the sun, some of them are now equipped with a goddamn BFG 9000. Drops a BFG 9000 on death and has 120 HP.
+Devastator Zombie: They're always one-upping themselves. You thought the BFG zombie was bad? Well, this one fires an upgraded BFG ball that also shoots lightning everywhere. Drops an energy cell pack on death and has 130 HP.
+
+Imp replacements: 
+
+Dark Imp: A dark skinned imp that has adapted to the lower regions of hell. It is capable of firing various kinds of projectiles, some of them faster, while others home in on their targets. Has 130 HP.
+Devil: The natural evolution of the Imp. It throws two to four fireballs at a time, and also has a low chance to throw two to four Baron fireballs instead. Has 120 HP.
+Cyber Imp: An imp that's been augmented with a plasma rifle attachment, giving it the ability to shoot blue plasma balls. Rarely drops a cell on death and has 100 HP.
+Rocket Imp: If the Cyber Imp is the Cyberdemon, then this is the Annihilator. Armed with two rocket launchers, it makes no hesitation to fire two rockets, one after the other. Rarely drops up to two rockets on death and has 120 HP.
+Tech Imp: A cybernetically-enhanced imp that has a chance to throw fireballs on repeat. Otherwise it's functionally identical to its vanilla counterpart. Has 100 HP.
+Cyber-Fodder: These zombies are weak and fragile, hence why they are now enhanced with the same plasma rifle augmentations that the Cyber Imps have, albeit this one instead fires three red plasma balls in a burst. Rarely drops a cell on death and has 70 HP.
+Needler Imp: Yet another imp with cybernetics. This one comes with a unique weapon that either shoots red needles in a three-round burst, or a railgun beam that deals hefty damage regardless of distance. Has 120 HP.
+Fusion Cyber Imp: And this is going further beyond. As its name implies, it's a fusion of the Cyber Imp and Rocket Imp, able to fire both plasma balls and rockets. Rarely drops up to two rockets and an energy cell on death and has 150 HP.
+
+Pinky Demon replacements: 
+
+Mech-Demon: A pinky demon with cybernetic implants that allows it to have twice as much health and deal twice as much damage. Has 300 HP.
+Blood Fiend: A red pinky demon with that can vomit its own blood at enemies which deals poison damage, and can also jump towards them to bite their faces off. Has 250 HP.
+Cyber Fiend: An upgraded Mech-Demon with the ability to vomit body parts on its target. Acts like a fusion of the Mech-Demon and Blood Fiend. Has 500 HP.
+Chaingun Demon: A Mech-Demon with a chaingun in its mouth, making it able to fire hitscan attacks. Bringing it down to 100 health causes it to drop its chaingun, upon which it acts like a normal Mech-Demon. Has 300 HP.
+Blind Mech-Demon: A Mech-Demon without eyes. Sounds like an easy target, right? No. It has developed an amazing sense of hearing and also runs faster than its brethren. Has 250 HP.
+Cyber Pinky: Essentially a weaker Mech-Demon that can also shoot plasma balls from its mouth. It also runs and attacks faster than normal. Has 250 HP.
+Metal Demon: A metallic pinky demon that runs slower than normal, but deals devastating damage up close. Has 250 HP.
+Suicide Bomber: And now for something completely different. This black-uniformed zombie is armed with a stick of dynamite and is ready to blow itself up and taking you with it, screaming along the way. Has 200 HP.
+Iron Demon: A fully-robotic pinky demon that has a shotgun embedded in its face. Attacks with a shotgun blast at both close and long ranges. Explodes when killed. Has 250 HP.
+
+Spectre replacements: 
+
+See Pinky Demon replacements, only all the enemies are translucent and rarely also drop Partial Invisibility spheres on death.
+Mechtre: See Mech-Demon.
+Blood Lurker: See Blood Fiend.
+Cyber Lurker: See Cyber Fiend.
+Chaingun Spectre: See Chaingun Demon.
+Blind Mechtre: See Blind Mech-Demon.
+Cyber Spectre: See Cyber Pinky.
+Metal Spectre: See Metal Demon. 
+Spectral Bomber: See Suicide Bomber.
+Iron Spectre: See Iron Demon.
+
+Lost Soul replacements: 
+
+Hellmine: You thought Suicide Bombers were bad? These silver skulls are flying, smaller versions of them that charge at you quickly. Very annoying to fight against. Has 100 HP.
+Arachnorb: An Arachnotron without its walking apparatus. It loses its trademark plasma cannon attack in favour of shooting homing plasma, plus a melee attack where it bites you. Has 150 HP.
+Jetpack Zombie: These zombies are equipped with jetpacks, making them fly. They attack with dual pistols and can also perform dodges, making them annoying threats to deal with. Has 200 HP.
+Baby Cacodemon: Nicknamed 'Hissies' by the marines, do not let their cuteness deceive you. They still retain their lightning ball spitting attacks of their adult counterparts. Has 150 HP.
+Robo-Soul: Mass-produced robotic clones of Lost Souls that attack more quickly and deal more damage than their normal counterparts, but have weaker health to compensate. Has 60 HP.
+
+Cacodemon replacements: 
+
+Cacobot: A robotic cacodemon equipped with cybernetics. Not only does it fire lightning balls from its mouth like normal, but it can also fire red plasma balls from its eye. Has 450 HP.
+Cyber Cacodemon: Your average cacodemon, also equipped with cybernetics (although not as much as the Cacobot's). Flies faster than its normal counterpart, and has a high chance of firing lightning balls repeatedly. Has 400 HP.
+Cacolantern: An orange cacodemon with a missing eye that shoots more damaging lightning balls compared to its vanilla counterpart. Has 500 HP.
+Abaddon: Now we're talking. This caco-beast can shoot three lightning balls at once, each being deadlier than its vanilla counterpart, with a thankfully low chance of repeatedly firing them. Has 800 HP.
+Enhanced Cacodemon: This cacodemon is darker (but not as dark as the Abaddon), and its greater power enables it to shoot three lightning balls at once in a spread (albeit not as deadly as the Abaddon). Has 500 HP.
+(More replacements will be available in the future)
+
+Pain Elemental replacements: 
+
+Hellmine Furnace: You thought Hellmines are bad enough? Here's a demon that does nothing but spew Hellmines at you forever from its built-in organic furnace. Has 500 HP.
+Cyber Elemental: Similar to the Hellmine Furnace above, the Cyber Elemental is essentially a one-demon Robo-Soul breeding factory, constantly spitting out Robo-Souls to drown your life out. Explodes when killed. Has 500 HP.
+Plasma Elemental: Here's a rather different one. This green Pain Elemental instead spits plasma balls from its mouth, frying anybody who doesn't pay attention. When killed, it explodes, sending plasma balls out in all directions. Has 500 HP.
+Defiler: Annoying for different reasons. It trades its lost soul-spitting attack for a fireball attack, plus one where it shoots up to three homing lost soul missiles. When killed, several fireballs and homing lost souls spawn. Has 750 HP.
+Tortured Soul: This pain elemental variant spits out poison clouds that deal damage to you overtime. Also screams every time it's given the chance. Has 700 HP.
+(More replacements will be available in the future)
+
+Hell Knight replacements: 
+
+Cyber Hell Knight: Essentially, a weaker version of the Cyber Baron (mentioned below). It's armed with the same fireball and rocket attacks as its stronger counterpart, only with half the health. Has 500 HP.
+Cybruiser: You've heard of the Bruiser Demon, now meet its cyberized counterpart. While it's weaker than its non-cybernetic equivalent, it's armed with a rocket launcher that will clearly turn anyone hit by it into gibs. Has 600 HP.
+Pyro Demon: These are Hell Knights given the ability to control the element of fire. It can throw multiple fireballs at a time, and can also fire a particularly large one that releases multiple explosions. Has 800 HP.
+Cryo Demon: When Hell freezes over, so do the demons. Cryo Demons are essentially the ice counterparts of Pyro Demons. It fires ice balls, both small and large, that are just as deadly, and can freeze you on hit. Has 850 HP.
+Hell Warrior: These Barons with lion manes are equipped with a shield that fires special green fireballs and can make them invulnerable every time they flinch, in addition to its usual fireball attack. Has 700 HP.
+Lesser Archon: Even the mighty Baron kneels to the Archons of Hell. The Lesser Archons have the ability to fire up to two fireballs at once, and can rarely summon a fire comet to deal some hefty damage. Has 800 HP.
+Pyrobruiser: (NOT IMPLEMENTED YET)
+
+Baron of Hell replacements: 
+
+Cyber Baron: The good old Baron of Hell, now armed with the same cybernetics as the Cyberdemon. Not only does it throw the same fireballs as the normal Hell Knight and Baron, but it's now also able to fire rockets from its rocket launcher. Has 1000 HP.
+Cybruiser Mk. II: The evolution of the Cybruiser. It has twice as much health as its lesser counterpart and it's now also armed with a minigun that will shred any enemies that either dodge or survive its rocket attack. Has 1200 HP.
+Bruiser Demon: Some Pyro Demons have mastered their pyrokinesis and have evolved into all-powerful Bruiser Demons. Not only are its previous attacks upgraded, it can also summon three floor-hugging exploding fireballs that are really annoying to fight against. Has 1500 HP.
+Frost Bruiser: Take the Bruiser Demon, replace fire with ice, and you get the Frost Bruiser. Its attacks are exactly the same as the Bruiser Demon's, only they deal ice damage instead of fire. Has 1600 HP.
+Hell Paladin: What happens when you fuse a Cybruiser with a Hell Warrior. It retains its invulnerability shield, which is upgraded to shoot red fireballs repeatedly, and also comes equipped with a grenade launcher in its right arm. Has 1300 HP.
+Greater Archon: You thought the lesser versions were bad? Meet the Greater Archons. They fire up to six fireballs instead of two, and have a higher chance of summoning fire comets. Has 1500 HP.
+Cybruiser Mk. III: (NOT IMPLEMENTED YET)
+
+Arachnotron replacements: 
+
+Augmented Arachnotron: Also known as the Arachnotron Mk. II. This Arachnotron has a denser chassis and an extra plasma rifle built in. It fires twice as fast as a normal arachnotron, but is otherwise the same. Rarely drops an energy cell on death and has 750 HP.
+Fusion Spider: An Arachnotron is equipped with a special fusion cannon that fires slow-moving plasma projectiles at a wide spread. Rarely drops an energy cell on death and has 600 HP.
+Rail Arachnotron: This Arachnotron is armed with a red-coloured railgun that, while more accurate and damaging at longer ranges, takes a rather long time to wind up. Rarely drops an energy cell on death and has 500 HP.
+Chaingun Spider: An Arachnotron equipped with a chaingun, making it a mini Spider Mastermind of sorts. Its hitscan attacks are more accurate at longer ranges, but deal less damage. Rarely drops a box of bullets on death and has 500 HP.
+
+Mancubus replacements: 
+
+Volacubus: Take the Mancubus, and replace its legs with propulsion jets. It can fly twice as fast as its vanilla counterpart, and is more aggressive than normal. Has 600 HP.
+Plasma Volacubus: A blue Volacubus that has the ability to fire plasma balls from its modified projectile launchers. Has 600 HP.
+Slime Volacubus: A green Volacubus that trades its flames for slimeballs that poison anything it touches. Has 600 HP.
+Cyber-Mancubus: Now here's a different specimen. The Cyber-Mancubus is armed with two launchers that shoot green fireballs that linger for a time before exploding. When killed, it explodes after a short delay. Has 700 HP.
+Ultramanc: (PLACEHOLDER)
+(More replacements will be available in the future)
+
+Revenant replacements: 
+
+Beam Revenant: This Revenant gets rid of its iconic homing missile launchers in favour of a railgun that shoots super fast projectiles that are equally as annoying to deal with. Has 300 HP.
+Heavy Revenant: (NOT IMPLEMENTED YET)
+Draugr: (NOT IMPLEMENTED YET)
+Death Incarnate: (NOT IMPLEMENTED YET)
+(More replacements will be available in the future)
+
+Arch-Vile replacements: 
+
+Diabolist: Has 1000 HP. (PLACEHOLDER, MIGHT BE REPLACED)
+Tech-Vile: (NOT IMPLEMENTED YET)
+Holo-Vile: (NOT IMPLEMENTED YET)
+Hell Chaingunner: (NOT IMPLEMENTED YET)
+Bulldozer: (NOT IMPLEMENTED YET)
+(More replacements will be available in the future)
+
+Cyberdemon replacements: 
+
+Superdemon: An uncybered Cyberdemon. Is this what the Harbinger of Doom used to look like? Anyways, it might be weaker, but it can still dish out a ton of damage with its powerful fireballs. Has 3500 HP.
+Evolved Cyberdemon: This Cyberdemon has green wires instead of red, and unlike its vanilla counterpart, now fires rockets repeatedly until its target leaves its line of sight. Has 4000 HP.
+Annihilator: If the Superdemon is a step down from the Cyberdemon, then this is a step up. It's now armed with not one, but two rocket launchers, that also have a chance to shoot homing missiles as well. Has 6000 HP.
+Dark Cyberdemon: A force to be reckoned with. This beast has learned many magic spells related to green fire and will have all its chances to use them against you. Drops up to two rocket boxes and cell packs on death and has 5000 HP.
+Cardinal: A Cyberdemon that lost its lower half in place of the ability to fly. It also replaced its rocket launcher with a railgun that has the ability to fire a salvo of three rails. Has 4500 HP.
+Terminator: The demons have constructed a killer robot, and it feels nothing but bloodlust and rage. It's able to fire a lot of projectiles from its mounted launchers, from plasma blasts to minigun bullets to even homing missiles. Has 7000 HP.
+Dark Cardihilator: (NOT IMPLEMENTED YET)
+Cyber Prototype X-1: Legend speaks of a Cyberdemon so powerful (and given Satan's approval) that it can decimate any planet by itself. This dark-skinned Cyberdemon prototype is armed with every attack imaginable. When killed, it drops one of every weapon in the game, plus a backpack, because you deserve it. Has a whopping 20000 HP (12000 for first phase, 8000 for second phase). (NOT IMPLEMENTED YET)
+
+Spider Mastermind replacements: 
+
+Arachnorb Queen: A Spider Mastermind without its walking apparatus. While it loses its chaingun, it gains a whole lot of plasma attacks destined to fry the brains of anyone hit by it, plus an extra melee attack as well. Has 2500 HP.
+Evolved Mastermind: This Spider Mastermind has gotten some upgrades. Mainly, its chaingun has been replaced with a freaking Pyro Cannon. Now it's able to clear you out with ease no matter the distance. Has 3000 HP.
+Demolisher: The Spider Mastermind's equivalent to the Annihilator. Not only does it have not one, but two chainguns, but it also now has a BFG 9000 built into its chassis, and will not hesitate to use it against you. Has 5000 HP.
+Arachnophyte: Take the Spider Mastermind, and replace its legs with jet thrusters. It still has the same chaingun attack as its vanilla counterpart however, so it's kinda falling behind compared to the others. Has 3500 HP.
+Cerebral Sentient: Combining the dual chainguns and BFG of the Demolisher with the jet thrusters of the Arachnophyte, this spider beast is definitely not something to underestimate. Has 5000 HP.
+Cyber Mastermind: What happens when you combine a Cyberdemon and Spider Mastermind together? You get this fusion that has both a chaingun and rocket launcher to use as its attacks. Has 5000 HP.
+Supreme Fiend: This flying Mastermind has upgraded its chassis in a similar but different fashion to the Arachnophyte's, and comes equipped with a projectile launcher that fires anything from plasma balls, to a BFG blast, to even fire grenades. Has 6000 HP.
+Spider Prototype X-2: The equally-powerful equivalent to the Cyber Prototype X-1. Much like its counterpart, it's armed with almost every attack imaginable. Drops the same items as the Cyber Prototype X-1 when killed. Has a whopping 15000 HP. (NOT IMPLEMENTED YET)
+
+The Cyber-Icon: (NOT IMPLEMENTED YET)
+The Icon of Sin, now fitted with cybernetics. This inhuman beast is in fact the mutated cult leader of the Nostalgia Cult of Regan McNeil. Not only does it spawn all the demon variants the normal Icon spawns, but also former humans, and very rarely, cyberdemons and spider masterminds, all at twice the speed too. If that's not enough, it also comes with its own attacks, mainly spawning random missiles to attack you. Available as an optional replacement for the vanilla Icon of Sin.
+
+Elemental Resistance Auras: (NOT IMPLEMENTED YET)
+Of course, the demons concocted some black magic upon themselves to give some noble demons resistance to certain damage types. You'll know them by the presence of coloured fog around them, with the colour corresponding to their respective damage type.
+Bullet (Yellow): 7/8th resistance to hitscan attacks.
+Electric (Red): 7/8th resistance to electric attacks.
+Venom (Green): 7/8th resistance to poison attacks.
+Ice (Blue): 7/8th resistance to ice attacks.
+Inferno (Orange): 7/8th resistance to fire attacks.
+Plasma (Purple): 7/8th resistance to plasma attacks.

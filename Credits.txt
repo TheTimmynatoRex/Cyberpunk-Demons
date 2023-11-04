@@ -1,0 +1,475 @@
+Credits (sorry if incorrectly credited): 
+
+Cyber-Zombieman: 
+Sprites: Cyanide (Shades of Doom)
+Sounds: Cyanide (Shades of Doom), Per Kristian (Doom HQ SFX)
+Code: Myself
+
+Rapid Fire Trooper: 
+Sprites: Tormentor667 (Realm667 Rapid Fire Trooper)
+Code: Tormentor667 (Realm667 Rapid Fire Trooper), edited by myself
+
+Plasma Zombie: 
+Sprites: Tormentor667 (Realm667 Plasma Zombie)
+Code: Tormentor667 (Realm667 Plasma Zombie), edited by myself
+
+Zombie Plasma Scientist: 
+Sprites: DavidN (Realm667 Zombie Plasma Scientist)
+Sounds: DavidN (Realm667 Zombie Plasma Scientist)
+Code: DavidN (Realm667 Zombie Plasma Scientist), edited by myself
+
+Headless Zombie Scientist: 
+Sprites: DavidN (Realm667 Headless Zombie Scientist)
+Sounds: DavidN (Realm667 Headless Zombie Scientist)
+Code: DavidN (Realm667 Headless Zombie Scientist), edited by myself
+
+Sonic Railgun Zombie: 
+Sprites: Ghastly_dragon (Realm667 Sonic Railgun Zombie)
+Sounds: Ghastly_dragon (Realm667 Sonic Railgun Zombie)
+Code: Ghastly_dragon (Realm667 Sonic Railgun Zombie), edited by myself
+
+Shadow Trooper: 
+Sprites: MagicWazard (Realm667 Shadow Trooper)
+Sounds: BruderDoomer (Rehacked)
+Code: MagicWazard (Realm667 Shadow Trooper), edited by myself
+
+Rocket Zombie: 
+Sprites: Tormentor667 (Realm667 Rocket Zombie)
+Code: Tormentor667 (Realm667 Rocket Zombie), Xim (Realm667 Rocket Zombie II), edited by myself
+
+Shotgun Technician: 
+Sprites: Jimmy (Jenesis)
+Code: Untitled (Dehacked Attack), edited by myself
+
+Karasawa Zombie: 
+Sprites: scalliano (Realm667 Karasawa Zombie)
+Sounds: scalliano (Realm667 Karasawa Zombie)
+Code: scalliano (Realm667 Karasawa Zombie), edited by myself
+
+Railgun Zombie: 
+Sprites: Tormentor667 (Realm667 Zombie Railgunner)
+Code: Tormentor667 (Realm667 Zombie Railgunner), edited by myself
+
+Spec Ops Zombie: 
+Sprites: Ghastly_dragon (Realm667 ZSpecOps), Kinsie (MetaDoom)
+Sounds: Kinsie (MetaDoom)
+Code: Ghastly_dragon (Realm667 ZSpecOps), Kinsie (MetaDoom), edited by myself
+
+Auto-Shotgun Guy: 
+Sprites: scalliano (Realm667 Auto Shotgun Guy)
+Sounds: scalliano (Realm667 Auto Shotgun Guy)
+Code: scalliano (Realm667 Auto Shotgun Guy), edited by myself
+
+Super Shotgun Zombie: 
+Sprites: Ghastly_dragon (Realm667 Super Shotgun Zombie)
+Sounds: Ghastly_dragon (Realm667 Super Shotgun Zombie)
+Code: Ghastly_dragon (Realm667 Super Shotgun Zombie), edited by myself
+
+Quad-Shotgun Guy: 
+Sprites: Ghastly_dragon (Realm667 Quad-Shotgun Zombie)
+Sounds: Ghastly_dragon (Realm667 Quad-Shotgun Zombie)
+Code: Ghastly_dragon (Realm667 Quad-Shotgun Zombie), edited by myself
+
+Nailgun Cyborg: 
+Sprites: Mechadon (Realm667 Nailborg)
+Sounds: Mechadon (Realm667 Nailborg)
+Code: Mechadon (Realm667 Nailborg), edited by myself
+
+Beam Zombie: 
+Sprites: Captain Toenail (Realm667 Beam Zombie)
+Sounds: Captain Toenail (Realm667 Beam Zombie)
+Code: Captain Toenail (Realm667 Beam Zombie), edited by myself
+
+Assault Rifle Commando: 
+Sprites: Kinsie (MetaDoom)
+Sounds: Kinsie (MetaDoom)
+Code: Kinsie (MetaDoom), edited by myself
+
+Minigunner: 
+Sprites: TheMightyHeracross (Realm667 Minigunner)
+Sounds: TheMightyHeracross (Realm667 Minigunner)
+Code: TheMightyHeracross (Realm667 Minigunner), edited by myself
+
+Dual Chaingun Major: 
+Sprites: Tormentor667 (Realm667 Double Chaingunner)
+Sounds: Tormentor667 (Realm667 Double Chaingunner)
+Code: Tormentor667 (Realm667 Double Chaingunner), edited by myself
+
+Uber Chaingunner: 
+Sprites: TheDoomedArchvile (Realm667 Uber Chaingunner)
+Sounds: TheDoomedArchvile (Realm667 Uber Chaingunner)
+Code: TheDoomedArchvile (Realm667 Uber Chaingunner), edited by myself
+
+Nailgun Cyborg Commando: 
+Sprites: Xim (Realm667 Nailborg Commando)
+Sounds: Xim (Realm667 Nailborg Commando)
+Code: Xim (Realm667 Nailborg Commando), edited by myself
+
+Repeater Zombie: 
+Sprites: Ghastly_dragon (Realm667 Repeater Zombie)
+Sounds: Ghastly_dragon (Realm667 Repeater Zombie)
+Code: Ghastly_dragon (Realm667 Repeater Zombie), edited by myself
+
+BFG Commando: 
+Sprites: Lister (Lister's Simple Doom)
+Sounds: scalliano (Realm667 BFG Commando)
+Code: scalliano (Realm667 BFG Commando), edited by myself
+
+Devastator Zombie: 
+Sprites: scalliano (Realm667 Devastator Zombie)
+Sounds: scalliano (Realm667 Devastator Zombie)
+Code: scalliano (Realm667 Devastator Zombie), edited by myself
+
+Dark Imp: 
+Sprites: Ghastly_dragon (Realm667 Dark Imp)
+Code: Ghastly_dragon (Realm667 Dark Imp), edited by myself
+
+Devil: 
+Sprites: Tormentor667 (Realm667 Devil), NaturalTvventy (Realm667 Super Devil)
+Sounds: Tormentor667 (Realm667 Devil)
+Code: Tormentor667 (Realm667 Devil), edited by myself
+
+Cyber Imp: 
+Sprites: Virtue (Realm667 Cyber Imp)
+Sounds: Virtue (Realm667 Cyber Imp)
+Code: Virtue (Realm667 Cyber Imp), edited by myself
+
+Rocket Imp: 
+Sprites: Skelegant (Realm667 Rocket Imp)
+Sounds: Virtue (Realm667 Cyber Imp), Skelegant (Realm667 Rocket Imp)
+Code: Skelegant (Realm667 Rocket Imp), edited by myself
+
+Tech Imp: 
+Sprites: Cyanide (Shades of Doom)
+Code: Cyanide (Shades of Doom), Untitled (Dehacked Attack), edited by myself
+
+Cyber-Fodder: 
+Sprites: cybermeme (Cyber's Monster Randomizer)
+Sounds: Virtue (Realm667 Cyber Imp)
+Code: cybermeme (Cyber's Monster Randomizer), edited by myself
+
+Needler Imp: 
+Sprites: Ganbare-Lucifer (Realm667 Needler Imp)
+Sounds: Virtue (Realm667 Cyber Imp), Ganbare-Lucifer (Realm667 Needler Imp)
+Code: Ganbare-Lucifer (Realm667 Needler Imp), edited by myself
+
+Fusion Cyber Imp: 
+Sprites: Ganbare-Lucifer (Realm667 Fusion Cyber Imp)
+Sounds: Virtue (Realm667 Cyber Imp), Skelegant (Realm667 Rocket Imp)
+Code: Ganbare-Lucifer (Realm667 Fusion Cyber Imp), edited by myself
+
+Mech-Demon: 
+Sprites: Tormentor667 (Realm667 Blood Demon)
+Sounds: Tormentor667 (Realm667 Blood Demon)
+Code: Tormentor667 (Realm667 Blood Demon), edited by myself
+
+Blood Fiend: 
+Sprites: Tormentor667 (Realm667 Blood Fiend)
+Sounds: Tormentor667 (Realm667 Blood Fiend)
+Code: Tormentor667 (Realm667 Blood Fiend, Realm667 Mauler Demon), edited by myself
+
+Cyber Fiend: 
+Sprites: hnsolo77 (Realm667 Cyberfiend)
+Sounds: hnsolo77 (Realm667 Cyberfiend)
+Code: hnsolo77 (Realm667 Cyberfiend), edited by myself
+
+Chaingun Demon: 
+Sprites: DeVloek (Realm667 Chaingun Demon)
+Sounds: Tormentor667 (Realm667 Blood Demon)
+Code: DeVloek (Realm667 Chaingun Demon), edited by myself
+
+Blind Mech-Demon: 
+Sprites: Skillsaw (Valiant)
+Sounds: TheDoomedArchvile (Realm667 Blind Pinky)
+Code: TheDoomedArchvile (Realm667 Blind Pinky), edited by myself
+
+Metal Demon: 
+Sprites: Cyanide (Shades of Doom)
+Code: Myself
+
+Cyber Pinky: 
+Sprites: Cyanide (Shades of Doom)
+Code: Myself
+
+Suicide Bomber: 
+Sprites: Tormentor667 (Realm667 Suicide Bomber)
+Sounds: Tormentor667 (Realm667 Suicide Bomber)
+Code: Tormentor667 (Realm667 Suicide Bomber), edited by myself
+
+Iron Demon: 
+Sprites: Cheesewheel (Malevolence: Episode 1)
+Code: Myself
+
+Hellmine: 
+Sprites: Yholl (DoomRL Monster Pack)
+Sounds: Yholl (DoomRL Monster Pack)
+Code: Yholl (DoomRL Monster Pack), edited by myself
+
+Arachnorb: 
+Sprites: Jimmy91 (Realm667 Aracnorb)
+Sounds: Jimmy91 (Realm667 Aracnorb)
+Code: Jimmy91 (Realm667 Aracnorb), edited by myself
+
+Jetpack Zombie: 
+Sprites: Ghastly_dragon (Realm667 Jetpack Zombie)
+Sounds: Ghastly_dragon (Realm667 Jetpack Zombie)
+Code: Ghastly_dragon (Realm667 Jetpack Zombie), edited by myself
+
+Baby Cacodemon: 
+Sprites: Yuraofthehairfan (Realm667 Baby Cacodemon)
+Sounds: Yuraofthehairfan (Realm667 Baby Cacodemon)
+Code: Yuraofthehairfan (Realm667 Baby Cacodemon), edited by myself
+
+Cyber-Soul: 
+Sprites: Cheesewheel (Malevolence: Episode 1)
+Code: Myself
+
+Cacobot: 
+Sprites: Cheesewheel (Malevolence: Episode 1)
+Sounds: DustedPandemonic (Pandemonia)
+Code: Myself
+
+Cyber Cacodemon: 
+Sprites: Cyanide (Shades of Doom)
+Sounds: Yholl (DoomRL Monster Pack)
+Code: Myself
+
+Cacolantern: 
+Sprites: Tormentor667 (Realm667 Cacolantern)
+Code: Tormentor667 (Realm667 Cacolantern), edited by myself
+
+Abaddon: 
+Sprites: Gothic (Realm667 Abaddon)
+Sounds: Gothic (Realm667 Abaddon)
+Code: Gothic (Realm667 Abaddon), edited by myself
+
+Enhanced Cacodemon: 
+Sprites: Tormentor667 (Realm667 Enhanced Cacodemon)
+Sounds: Tormentor667 (Realm667 Enhanced Cacodemon)
+Code: Tormentor667 (Realm667 Enhanced Cacodemon)
+
+Hellmine Furnace: 
+Sprites: Cheesewheel (Malevolence: Episode 1)
+Sounds: Yholl (DoomRL Monster Pack)
+Code: Myself
+
+Cyber Elemental: 
+Sprites: Yholl (DoomRL Monster Pack)
+Sounds: Yholl (DoomRL Monster Pack)
+Code: Myself
+
+Plasma Elemental: 
+Sprites: The Ultimate Doomer (Realm667 Plasma Elemental)
+Code: The Ultimate Doomer (Realm667 Plasma Elemental), edited by myself
+
+Defiler: 
+Sprites: Dreadopp (Realm667 Defiler)
+Sounds: Dreadopp (Realm667 Defiler)
+Code: Dreadopp (Realm667 Defiler)
+
+Tortured Soul: 
+Sprites: Tormentor667 (Realm667 Tortured Soul)
+Sounds: Tormentor667 (Realm667 Tortured Soul)
+Code: Tormentor667 (Realm667 Tortured Soul)
+
+Cyber Hell Knight: 
+Sprites: Ganbare-Lucifer (Realm667 Cyber Hell Knight)
+Sounds: Ganbare-Lucifer (Realm667 Cyber Hell Knight), Ben2k9 (Realm667 Cyber Baron)
+Code: Ganbare-Lucifer (Realm667 Cyber Hell Knight), edited by myself
+
+Cybruiser: 
+Sprites: Tormentor667 (Realm667 Cybruiser)
+Sounds: Tormentor667 (Realm667 Cybruiser)
+Code: Tormentor667 (Realm667 Cybruiser), edited by myself
+
+Pyro Demon: 
+Sprites: Maelstrom (Realm667 Pyro Demon)
+Sounds: Maelstrom (Realm667 Pyro Demon)
+Code: Maelstrom (Realm667 Pyro Demon), BruderDoomer (Rehacked), edited by myself
+
+Cryo Demon: 
+Sprites: BruderDoomer (Rehacked)
+Sounds: BruderDoomer (Rehacked)
+Code: BruderDoomer (Rehacked), edited by myself
+
+Hell Warrior: 
+Sprites: Tormentor667 (Realm667 Hell Warrior)
+Sounds: DustedPandemonic (Pandemonia)
+Code: Tormentor667 (Realm667 Hell Warrior), edited by myself
+
+Lesser Archon: 
+Sprites: Tormentor667 (Realm667 Hellstorm Archon)
+Sounds: Tormentor667 (Realm667 Hellstorm Archon)
+Code: Tormentor667 (Realm667 Hellstorm Archon), edited by myself
+
+Pyrobruiser: 
+Sprites: DustedPandemonic (Pandemonia)
+Sounds: DustedPandemonic (Pandemonia)
+Code: 
+
+Cyber Baron: 
+Sprites: Ben2k9 (Realm667 Cyber Baron)
+Sounds: Ben2k9 (Realm667 Cyber Baron)
+Code: Ben2k9 (Realm667 Cyber Baron), edited by myself
+
+Cybruiser Mk. II: 
+Sprites: Dragonfly (Eviternity)
+Sounds: DustedPandemonic (Pandemonia)
+Code: Untitled (Dehacked Attack), edited by myself
+
+Bruiser Demon: 
+Sprites: Tormentor667 (Realm667 Bruiser Demon)
+Sounds: Tormentor667 (Realm667 Bruiser Demon)
+Code: Tormentor667 (Realm667 Bruiser Demon), BruderDoomer (Rehacked), edited by myself
+
+Frost Bruiser: 
+Sprites: BruderDoomer (Rehacked)
+Sounds: BruderDoomer (Rehacked)
+Code: BruderDoomer (Rehacked), edited by myself
+
+Hell Paladin: 
+Sprites: JohnCook1994 (Realm667 Hell Paladin)
+Sounds: JohnCook1994 (Realm667 Hell Paladin), DustedPandemonic (Pandemonia)
+Code: JohnCook1994 (Realm667 Hell Paladin), edited by myself
+
+Greater Archon: 
+Sprites: Tormentor667 (Realm667 Archon of Hell)
+Sounds: Tormentor667 (Realm667 Archon of Hell)
+Code: Tormentor667 (Realm667 Archon of Hell), edited by myself
+
+Cybruiser Mk. III: 
+Sprites: DustedPandemonic (Pandemonia)
+Sounds: DustedPandemonic (Pandemonia)
+Code: 
+
+Augmented Arachnotron: 
+Sprites: Zdude (Realm667 Augmented Arachnotron)
+Code: Zdude (Realm667 Augmented Arachnotron), edited by myself
+
+Fusion Spider: 
+Sprites: Tormentor667 (Realm667 Fusion Arachno)
+Sounds: Tormentor667 (Realm667 Fusion Arachno)
+Code: Tormentor667 (Realm667 Fusion Arachno), edited by myself
+
+Rail Arachnotron: 
+Sprites: Captain Toenail (Realm667 Rail Arachnotron)
+Sounds: Captain Toenail (Realm667 Rail Arachnotron)
+Code: Captain Toenail (Realm667 Rail Arachnotron), edited by myself
+
+Chaingun Spider: 
+Sprites: Captain Toenail (Realm667 Chaingun Spider)
+Sounds: Captain Toenail (Realm667 Chaingun Spider)
+Code: Captain Toenail (Realm667 Chaingun Spider), edited by myself
+
+Volacubus, Plasma Volacubus and Slime Volacubus: 
+Sprites: DeVloek (Realm667 Volacubus)
+Sounds: DeVloek (Realm667 Volacubus)
+Code: DeVloek (Realm667 Volacubus), edited by myself
+
+Cyber Mancubus: 
+Sprites: Kinsie (MetaDoom)
+Sounds: Kinsie (MetaDoom)
+Code: Kinsie (MetaDoom), TerminatorT64 (T64: Ultimate Pack), edited by myself
+
+Ultramanc: 
+Sprites: TerminatorT64 (T64: Ultimate Pack)
+Sounds: TerminatorT64 (T64: Ultimate Pack)
+Code: TerminatorT64 (T64: Ultimate Pack), edited by myself
+
+Beam Revenant: 
+Sprites: Captain Ventris (Realm667 Beam Revenant)
+Sounds: Captain Ventris (Realm667 Beam Revenant)
+Code: Captain Ventris (Realm667 Beam Revenant), edited by myself
+
+Diabolist: 
+Sprites: Tormentor667 (Realm667 Diabolist)
+Sounds: Tormentor667 (Realm667 Diabolist)
+Code: Tormentor667 (Realm667 Diabolist), edited by myself
+
+Superdemon: 
+Sprites: Xim (Realm667 Superdemon)
+Sounds: Xim (Realm667 Superdemon)
+Code: Xim (Realm667 Superdemon), edited by myself
+
+Evolved Cyberdemon: 
+Sprites: Tango (Supercharge)
+Code: Myself
+
+Annihilator: 
+Sprites: Tormentor667 (Realm667 Annihilator)
+Sounds: Tormentor667 (Realm667 Annihilator)
+Code: Tormentor667 (Realm667 Annihilator), edited by myself
+
+Dark Cyberdemon: 
+Sprites: DBThanatos (Realm667 Thamuz), zrrion the insect (Realm667 Dark Cardinal)
+Sounds: DBThanatos (Realm667 Thamuz), zrrion the insect (Realm667 Dark Cardinal)
+Code: DBThanatos (Realm667 Thamuz), zrrion the insect (Realm667 Dark Cardinal), edited by myself
+
+Cardinal: 
+Sprites: BruderDoomer (Rehacked)
+Sounds: BruderDoomer (Rehacked), Ghastly_dragon (Realm667 Sonic Railgun Zombie)
+Code: BruderDoomer (Rehacked), edited by myself
+
+Terminator: 
+Sprites: Vader (Realm667 Terminator), DBThanatos (Quake Champions: Doom Edition)
+Sounds: Vader (Realm667 Terminator), DBThanatos (Quake Champions: Doom Edition), Valve Software (Half-Life 2)
+Code: Vader (Realm667 Terminator), DBThanatos (Quake Champions: Doom Edition), edited by myself
+
+Dark Cardihilator: 
+Sprites: Lister (Lister's Simple Doom)
+Sounds: 
+Code: 
+
+Cyber Prototype X-1: 
+Sprites: Yholl (DoomRL Monster Pack), Untitled (Dehacked Attack)
+Sounds: BruderDoomer (Rehacked)
+Code: 
+
+Arachnorb Queen: 
+Sprites: Yuraofthehairfan (Realm667 Aracnorb Queen)
+Sounds: Yuraofthehairfan (Realm667 Aracnorb Queen)
+Code: Yuraofthehairfan (Realm667 Aracnorb Queen), edited by myself
+
+Evolved Mastermind: 
+Sprites: Yholl (DoomRL Monster Pack), Scalliano (Realm667 Pyro Zombie)
+Sounds: Yholl (DoomRL Monster Pack), Scalliano (Realm667 Pyro Zombie)
+Code: Scalliano (Realm667 Pyro Zombie), edited by myself
+
+Demolisher: 
+Sprites: Tormentor667 (Realm667 Demolisher)
+Sounds: Tormentor667 (Realm667 Demolisher)
+Code: Tormentor667 (Realm667 Demolisher), edited by myself
+
+Arachnophyte: 
+Sprites: Tormentor667 (Realm667 Arachnophyte)
+Sounds: Tormentor667 (Realm667 Arachnophyte)
+Code: Tormentor667 (Realm667 Arachnophyte), edited by myself
+
+Cerebral Sentient: 
+Sprites: BruderDoomer (Rehacked)
+Sounds: BruderDoomer (Rehacked)
+Code: BruderDoomer (Rehacked), edited by myself
+
+Cyber Mastermind: 
+Sprites: Tormentor667 (Realm667 Cyber Mastermind)
+Code: Tormentor667 (Realm667 Cyber Mastermind), edited by myself
+
+Supreme Fiend: 
+Sprites: Raz (Realm667 Supreme Fiend), Tormentor667 (Realm667 Catharsi)
+Sounds: Raz (Realm667 Supreme Fiend), Tormentor667 (Realm667 Catharsi)
+Code: Raz (Realm667 Supreme Fiend), Tormentor667 (Realm667 Catharsi), edited by myself
+
+Spider Prototype X-2: 
+Sprites: Lister (Lister's Simple Doom)
+Sounds: Kinsie (MetaDoom)
+Code: 
+
+Extra pain sounds: Yholl (DoomRL Monster Pack)
+Elemental Resistance Auras: ZDL (Cyberpunk 2177), edited by myself
+Endgame cast code: Yholl (DoomRL Monster Pack), edited by myself
+Endgame screen: Yholl (DoomRL Monster Pack), edited by myself
+Endgame cast music: Hidden City - Esselfortium (Future Human)
+Final boss music: 
+-Take Me To Hell - SWARM
+-Betrayer - Esselfortium
+-Welcome To The New World - Varis Alpha

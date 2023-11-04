@@ -1,0 +1,429 @@
+
+Actor CPDHellmine {
+  Health 100
+  Radius 16
+  Height 24
+  Mass 50
+  Speed 6
+  Damage 3
+  PainChance 256
+  Monster
+  +FLOAT
+  +NOGRAVITY
+  +MISSILEMORE
+  +DONTFALL
+  +NOICEDEATH
+  +NOFEAR
+  +DONTSPLASH
+  +TOUCHY
+  AttackSound "hellmine/target"
+  PainSound "hellmine/pain"
+  DeathSound "weapons/rocklx"
+  ActiveSound "hellmine/losetarget"
+  Obituary "%o got too close to a Hellmine."
+  Tag "Hellmine"
+  States
+  {
+  Spawn:
+    TNT1 A 0 A_PlaySound("hellmine/hum", 7, 0.25, 1)
+    CSOL A 4 A_Look
+    Loop
+  See:
+    TNT1 A 0 A_PlaySound("hellmine/hum", 7, 0.25, 1)
+    CSOL A 5 A_Chase
+	CSOL A 0 A_JumpIfCloser(64, "Death")
+	Loop
+	Missile:
+	CSOL A 5 BRIGHT A_FaceTarget
+	CSOL B 4 BRIGHT A_SkullAttack
+	CSOL AB 4 BRIGHT
+	CSOL A 0 A_JumpIfCloser(64, "Death")
+	Goto Missile+2
+	Pain: 
+	CSOL A 5 A_Pain
+	Goto See
+  Death: 
+    TNT1 A 0 A_Stop
+	TNT1 A 0 A_StopSound(7)
+    TNT1 A 0 A_PlaySound("hellmine/arm", 7)
+    CSOL B 3 Bright A_FaceTarget
+    CSOL A 2 A_FaceTarget
+    CSOL B 3 Bright A_FaceTarget
+    CSOL A 2 A_FaceTarget
+    CSOL B 3 Bright A_FaceTarget
+    CSOL A 2 A_FaceTarget
+	TNT1 A 0 A_Scream
+	TNT1 A 0 A_NoBlocking
+	CSOL C 6 Bright A_Explode (48, 128)
+	CSOL D 6 Bright
+	CSOL E 6 Bright
+    TNT1 A 15
+    Stop
+  }
+}
+
+actor CPDArachnorb
+{
+  MONSTER
+  +NOGRAVITY
+  +FLOAT
+  +FLOATBOB
+  Health 150
+  Radius 24
+  Height 56
+  Mass 400
+  Speed 12
+  PainChance 150
+  SeeSound "aracnorb/sight"
+  ActiveSound "baby/active"
+  PainSound "baby/pain"
+  DeathSound "aracnorb/death"
+  MeleeSound "aracnorb/melee"
+  MeleeDamage 6
+  MissileHeight 36
+  MissileType AracnorbBall
+  Obituary "%o suffered psychic trauma from an Arachnorb's brainwaves."
+  HitObituary "%o had %p skull chewed by an Arachnorb."
+  Tag "Arachnorb"
+  Scale 0.85
+  States
+  {
+  Spawn:
+    ACNB A 1 A_Look
+    Loop
+  See:
+    ACNB A 2 A_Chase
+    Loop
+  Melee:
+    ACNB AB 5
+    ACNB C 6 A_MeleeAttack
+    Goto See
+  Missile:
+    ACNB B 12 Bright A_FaceTarget
+    ACNB C 2 Bright A_MissileAttack
+    ACNB B 2 Bright
+    ACNB D 0 A_Jump(32,"See")
+    ACNB D 0 A_SpidRefire
+    Goto Missile+1
+  Pain:
+    ACNF I 2
+    ACNF I 2 A_Pain
+    Goto See
+  Death:
+    ACNB D 0 A_ChangeFlag("FLOATBOB",0)
+    ACNB D 0 A_Scream
+	ACNB D 6 A_Fall
+    ACNB D 1
+    Wait
+  Crash:
+    ACNB EFG 6
+    ACNB H -1
+    Stop
+  Raise:
+    ACNB HGFEDA 8
+    ACNB A 0 A_ChangeFlag("FLOATBOB",1)
+	Goto See
+  }
+}
+
+actor AracnorbBall
+{
+  Radius 13
+  Height 8
+  Speed 8
+  Damage 3
+  RenderStyle Add
+  Alpha 0.75
+  SeeSound "baby/attack"
+  DeathSound "baby/shotx"
+  PROJECTILE
+  +STRIFEDAMAGE
+  +SEEKERMISSILE
+  +RANDOMIZE
+  States
+  {
+  Spawn:
+    ACNF AABB 1 Bright A_BishopMissileWeave
+    Loop
+  Death:
+    ACNF CDEFG 5 Bright
+    Stop
+  }
+}
+
+Actor CPDJetpackZombie 
+{
+  Obituary "%o was picked off by a Jetpack Zombie."
+  Health 200
+  Radius 24
+  Height 56
+  Mass 0x7fffffff
+  Speed 6
+  PainChance 32
+  SeeSound "JetpackZombie/Sight"
+  PainSound "JetpackZombie/Pain"
+  ActiveSound "JetpackZombie/Active"
+  DeathSound "grunt/death3"
+  Tag "Jetpack Zombie"
+  Monster
+  +FloorClip
+  +DontHurtSpecies
+  +Float
+  +NoGravity
+  +DontFall
+  +FloatBob
+  States
+  {
+  Spawn:
+    JPZM A 0
+    JPZM A 0 A_PlaySoundEx("JetpackZombie/Fly", "SoundSlot7", 1)
+    JPZM A 1 A_Look
+    Loop
+  See:
+    JPZM A 0 A_PlaySoundEx("JetpackZombie/Fly", "SoundSlot7", 1)
+    JPZM A 0 A_JumpIfCloser(512, 2)
+    JPZM A 2 A_Chase
+    Loop
+    JPZM A 0 A_CheckSight("2")
+    JPZM A 0 A_Jump(32, "Dodge")
+    JPZM A 0
+    Goto See+2
+  Dodge:
+    JPZM A 0 A_Jump(128, 4)
+    JPZM A 0 A_FaceTarget
+    JPZM A 10 ThrustThing(Angle*256/360-192, 8, 1, 0)
+    JPZM A 0 A_Stop
+    Goto See+2
+    JPZM A 0 A_Jump(128, 4)
+    JPZM A 0 A_FaceTarget
+    JPZM A 10 ThrustThing(Angle*256/360-64, 8, 1, 0)
+    JPZM A 0 A_Stop
+    Goto See+2
+    JPZM A 0 A_Jump(64, 4)
+    JPZM A 0 A_FaceTarget
+    JPZM A 10 ThrustThingZ(0, 16, 0, 0)
+    JPZM A 0 A_Stop
+    Loop
+    Goto See+2
+    JPZM A 0 A_FaceTarget
+    JPZM A 10 ThrustThingZ(0, 16, 1, 0)
+    JPZM A 0 A_Stop
+    Goto See+2
+  Missile:
+    JPZM A 0 A_JumpIfCloser(512, 1)
+    Goto Snipe
+    JPZM AAA 6 A_FaceTarget
+    JPZM B 0 Bright A_PlaySound("JetpackZombie/Fire")
+    JPZM B 6 Bright A_CustomBulletAttack(16, 12, 1, 6, "BulletPuff")
+    JPZM C 0 Bright A_PlayWeaponSound("JetpackZombie/Fire")
+    JPZM C 6 Bright A_CustomBulletAttack(16, 12, 1, 6, "BulletPuff")
+    JPZM A 0 A_Jump(64, 1)
+    Goto Missile+4
+    JPZM A 0
+    Goto See
+  Snipe:
+    JPZM AAAAA 6 A_FaceTarget
+    JPZM D 0 Bright A_PlaySound("JetpackZombie/Fire")
+    JPZM D 6 Bright A_CustomBulletAttack(2, 2, 2, 8, "BulletPuff")
+    Goto See
+  Pain:
+    JPZM A 3
+    JPZM A 3 A_Pain
+    Goto See
+  Death:
+    JPZM A 0 A_StopSound
+    JPZM A 0 A_Scream
+    JPZM E 2 ThrustThingZ(0, random(2, 8), 0, 0)
+    JPZM E 0 ThrustThing (random(0, 255), random(2, 8), 0, 0)
+    JPZM F 2 A_NoBlocking
+    JPZM GHIEFGH 2
+    JPZM A 0 A_ChangeFlag("FloatBob", 0)
+    JPZM A 0 A_StopSoundEx("JetpackZombie/Fly")
+    JPZM A 0 A_SpawnItemEx("JetpackZombieGoreSpawner", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    JPZM IE 2
+    JPZM F 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    JPZM A 0 A_SpawnItemEx("JetpackZombieGoreSpawner", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    JPZM GH 2
+    JPZM E 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    JPZM A 0 A_SpawnItemEx("JetpackZombieGoreSpawner", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    JPZM FG 2
+    JPZM H 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    JPZM AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+    JPZM AAA 0 A_SpawnItemEx("JetpackZombieGoreSpawner", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    Stop
+   }
+}
+
+Actor JetpackZombieExplosion
+{
+  Radius 1
+  Height 1
+  Speed 0
+  Damage 0
+  RenderStyle Add
+  Alpha 0.75
+  +Missile
+  +NoGravity
+  +NoBlockMap
+  +NoClip
+  +NoTeleport
+  States
+  {
+  Spawn:
+    MISL B 0
+    MISL B 0 A_PlaySound("Weapons/RockLX")
+    MISL BCD 3 Bright
+    Stop
+  }
+}
+
+Actor JetpackZombieGoreSpawner
+{
+  Radius 1
+  Height 1
+  Speed 0
+  Damage 0
+  +NoClip
+  +NoBlockmap
+  +NoTeleport
+  States
+  {
+  Spawn:
+    TNT1 A 0
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Blood", 0, 0, 0, (0.1)*Random(20, 70), 0, (0.1)*Random(-10, 80), Random(0, 360), 128)
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Blood", 0, 0, 0, (0.1)*Random(20, 70), 0, (0.1)*Random(-10, 80), Random(0, 360), 128)
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Blood", 0, 0, 0, (0.1)*Random(20, 70), 0, (0.1)*Random(-10, 80), Random(0, 360), 128)
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Blood", 0, 0, 0, (0.1)*Random(20, 70), 0, (0.1)*Random(-10, 80), Random(0, 360), 128)
+    TNT1 A 1
+    Stop
+  }
+}
+
+ACTOR CPDBabyCaco : Cacodemon
+{
+	Health 150
+	Radius 18
+	Height 36
+	Mass 200
+	Speed 9
+	PainChance 176
+	SeeSound "BabyCaco/Sight"
+	PainSound "BabyCaco/Pain"
+	DeathSound "BabyCaco/Death"
+	ActiveSound "BabyCaco/Active"
+	BloodColor "Blue"
+	Obituary "%o underestimated a Baby Cacodemon."
+	HitObituary "%o was nibbled to death by a Baby Cacodemon."
+	Tag "Baby Cacodemon"
+	MONSTER
+	+NOGRAVITY
+	+FLOAT 
+	States
+	{
+	Spawn:
+		CACB A 10 A_Look
+		Loop
+	See:
+		CACB A 3 A_Chase
+		Loop
+	Melee:
+	Missile:
+		CACB AB 5 A_FaceTarget
+		CACB C 5 Bright A_CustomComboAttack("BabyCacoBall", 17, random(1,8) * 3, "BabyCaco/Melee")
+		Goto See
+	Pain:
+		CACB D 3
+		CACB D 3 A_Pain
+		CACB E 6
+		Goto See
+	Death:
+		CACB F 8
+		CACB G 8 A_Scream
+		CACB H 8
+		CACB I 8
+		CACB J 8 A_NoBlocking
+		CACB K 8
+		CACB L -1 A_SetFloorClip
+		Stop
+	Raise:
+		CACB L 8 A_UnSetFloorClip
+		CACB KJIHGF 8
+		Goto See
+	}
+}
+
+ACTOR BabyCacoBall
+{
+	Radius 3
+	Height 4
+	Speed 11
+	FastSpeed 10
+	Damage 3
+	Projectile 
+	+RANDOMIZE
+	RenderStyle Add
+	Alpha 1
+	SeeSound "caco/attack"
+	DeathSound "caco/shotx"
+	Decal "HImpScorch"
+	States
+	{
+	Spawn:
+		BCAB AB 4 BRIGHT
+		Loop
+	Death:
+		BCAB CDE 6 BRIGHT
+		Stop
+	}
+}
+
+ACTOR CPDRoboSoul
+{
+  Health 60
+  Radius 16
+  Height 56
+  Mass 50
+  Speed 8
+  Damage 5
+  PainChance 200
+  Monster
+  +FLOAT
+  +NOGRAVITY
+  +MISSILEMORE
+  +MISSILEEVENMORE
+  +DONTFALL
+  +NOICEDEATH
+  AttackSound "skull/melee"
+  PainSound "skull/pain"
+  DeathSound "skull/death"
+  ActiveSound "skull/active"
+  RenderStyle SoulTrans
+  Obituary "%o was screamed out by a Robo-Soul."
+  Tag "Robo-Soul"
+  States
+  {
+  Spawn:
+    RSKL AB 10 Bright A_Look
+    Loop
+  See:
+    RSKL AB 4 Bright A_Chase
+    Loop
+  Missile:
+    RSKL C 10 Bright A_FaceTarget
+    RSKL D 4 Bright A_SkullAttack
+    RSKL CD 4 Bright
+    Goto Missile+2
+  Pain:
+    RSKL E 3 Bright
+    RSKL E 3 Bright A_Pain
+    Goto See
+  Death:
+    RSKL F 6 Bright
+    RSKL G 6 Bright A_Scream
+    RSKL H 6 Bright
+    RSKL I 6 Bright A_NoBlocking
+    RSKL J 6
+    RSKL K 6
+    Stop
+  }
+}

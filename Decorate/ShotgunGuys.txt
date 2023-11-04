@@ -1,0 +1,1268 @@
+ACTOR CPDShotgunTechnician
+{
+  Health 50
+  Radius 20
+  Height 56
+  Mass 100
+  Speed 8
+  PainChance 170
+  Monster
+  +FLOORCLIP
+  SeeSound "chainguy/sight"
+  AttackSound "chainguy/attack"
+  PainSound "chainguy/pain"
+  DeathSound "chainguy/death"
+  ActiveSound "chainguy/active"
+  Obituary "%o was riddled with holes by a Shotgun Technician."
+  DropItem "Shotgun"
+  Tag "Shotgun Technician"
+  States
+  {
+  Spawn:
+    STCH AB 10 A_Look
+    Loop
+  See:
+    STCH AABBCCDD 3 A_Chase
+    Loop
+  Missile:
+    STCH E 8 A_FaceTarget
+	STCH F 0 A_SPosAttack
+    STCH F 8 Bright A_SPosAttackUseAtkSound
+    STCH E 8
+    Goto See
+  Pain:
+    STCH E 3
+    STCH E 3 A_Pain
+    Goto See
+  Death:
+    STCH H 5
+    STCH I 5 A_Scream
+    STCH J 5 A_NoBlocking
+    STCH K 5
+    STCH L -1
+    Stop
+  XDeath:
+    STCH M 5
+    STCH N 5 A_XScream
+    STCH O 5 A_NoBlocking
+    STCH PQRST 5
+    STCH U -1
+    Stop
+  Raise:
+    STCH L 5
+    STCH KJIH 5
+    Goto See
+  }
+}
+
+ACTOR CPDKarasawaGuy
+{
+    Health 80
+    Radius 20
+    Height 56
+    Speed 8
+    PainChance 70
+    MONSTER 
+    +FLOORCLIP
+    SeeSound "grunt/sight"
+    AttackSound "Weapons/KarasawaFire"
+    PainSound "grunt/pain"
+    DeathSound "grunt/death"
+    ActiveSound "grunt/active"
+    Obituary "%o got ripped apart by a Karasawa Zombie."
+	Tag "Karasawa Zombie"
+    DropItem Cell 
+    States
+    {
+    Spawn:
+        KSWZ AB 10 A_Look
+        Loop
+    See:
+        KSWZ AABBCCDD 4 A_Chase
+        Loop
+    Missile:
+        KSWZ E 0 A_FaceTarget
+        KSWZ E 10
+        KSWZ F 0 Bright A_PlayWeaponSound("Weapons/KarasawaFire")
+        KSWZ F 10 Bright A_CustomMissile("KsawBolt", 32, 1, random(-20, 20), 0)
+        KSWZ E 3 
+        KSWZ A 0 A_PlaySound ("Weapons/KarasawaCharge")
+        KSWZ E 10 
+        KSWZ AABBCCDD 4 A_Wander
+        Goto See
+    Pain:
+        KSWZ G 3
+        KSWZ G 3 A_Pain
+        Goto See
+    Death:
+        KSWZ H 5
+        KSWZ I 5 A_Scream
+        KSWZ J 5 A_Fall
+        KSWZ K 5
+        KSWZ L 5
+        KSWZ M 5
+        KSWZ N -1
+        Stop
+    XDeath:
+        KSWZ O 5
+        KSWZ P 5 A_XScream
+        KSWZ Q 5 A_Fall
+        KSWZ RSTUV 5
+        KSWZ W -1
+        Stop
+    Raise:
+        KSWZ NMLKJIH 5
+        Goto See
+    }
+}
+
+Actor KsawBolt
+{
+  Projectile
+  +Ripper
+  +BloodSplatter
+  +StrifeDamage
+  +HexenBounce
+  +CanBounceWater
+  +SkyExplode
+  BounceFactor 1.2
+  Radius 6
+  Height 4
+  Speed 80
+  Damage 12
+  Alpha 1.0
+  XScale 1.5
+  YScale 0.4
+  RenderStyle Add
+  SeeSound ""
+  DeathSound "Weapons/KarasawaHit"
+  States
+  {
+  Spawn:
+    KWBB A 0 Bright A_PlaySound("KsawBoltFly")
+    KWBB ABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCD 1 Bright A_SpawnItemEx("BoltBlur", 0, 0, 0, 1, 0, 0, 180, 128)
+  Death:
+    KWBD ABCDEF 2 Bright
+    Stop
+  }
+}
+
+Actor BoltBlur
+{
+  Height 2
+  Radius 6
+  Damage 0
+  Speed 0.2
+  RenderStyle Add
+  Alpha 0.9
+  XScale 1.3
+  YScale 0.3
+  +NoGravity
+  +DropOff
+  +NoTeleport
+  states
+  {
+  Spawn:
+    KWBR AB 2 Bright A_FadeOut(0.3)
+    Loop
+  }
+}
+
+ACTOR CPDZombieRailgunner
+{ 
+    Health 50
+    Radius 20 
+    Height 56 
+    Speed 8
+    Damage 100
+    PainChance 200
+    MONSTER 
+    +FLOORCLIP 
+    Obituary "%o was railed by a Railgun Zombie." 
+    SeeSound "grunt/sight" 
+    PainSound "grunt/pain" 
+    DeathSound "grunt/death" 
+    ActiveSound "grunt/active" 
+    Decal RedRailScorch
+	Tag "Railgun Zombie"
+	DropItem Cell
+    States 
+    { 
+    Spawn: 
+        RPOS AB 10 A_Look 
+        Loop 
+    See: 
+        RPOS AABBCCDD 4 A_Chase 
+        Loop 
+    Missile: 
+        RPOS E 10 A_FaceTarget 
+        RPOS F 5 A_CustomRailgun (30, 0, ac1819, FF6C00)
+        RPOS E 4 A_FaceTarget 
+        Goto See 
+    Pain: 
+        RPOS G 5 
+        RPOS G 3 A_Pain 
+        Goto See 
+    Death: 
+        RPOS H 5 
+        RPOS I 5 A_Scream 
+        RPOS J 5 A_Fall 
+        RPOS K 5 
+        RPOS L -1 
+        Stop 
+    XDeath: 
+        RPOS O 5      
+        RPOS P 5 A_XScream       
+        RPOS Q 5 A_Fall        
+        RPOS RSTUV 5 
+        RPOS W -1 
+        Stop 
+    Raise: 
+        RPOS LKJIH 5 
+        Goto See 
+    } 
+}
+
+Actor CPDZSpecOps
+{
+  Health 100
+  Height 56
+  Radius 20
+  Speed 8
+  PainChance 96
+  Monster
+  +FloorClip
+  +NoTarget
+  +NoInfighting
+  +ROLLSPRITE
+  +ROLLCENTER
+  SeeSound "ZSO/Sight"
+  ActiveSound "ZSO/Active"
+  PainSound "ZSO/Pain"
+  DeathSound "ZSO/Death"
+  Obituary "%o was gunned down by a Spec Ops Zombie."
+  Decal BulletChip
+  DropItem "Shotgun"
+  Tag "Spec Ops Zombie"
+  States
+  {
+  Spawn:
+    ZSPO AAAAAAAAAABBBBBBBBBB 1 A_Look
+    Loop
+
+  //Switching
+  See:
+    ZSPO A 0 A_TakeInventory("ZSpecOpAggressive", 1)
+    ZSPO A 0 A_TakeInventory("ZSpecOpSprint", 1)
+    ZSPO A 0 A_TakeInventory("ZSpecOpWander", 1)
+    ZSPO A 0 A_TakeInventory("ZSpecOpCreep", 1)
+    ZSPO A 0 A_TakeInventory("ZSpecOpBerserk", 1)
+    ZSPO A 0 A_ChangeFlag("MissileMore", 0)
+    ZSPO A 0 A_ChangeFlag("MissileEvenMore", 0)
+    ZSPO A 0 A_ChangeFlag("AvoidMelee", 0)
+    ZSPO A 0 A_ChangeFlag("NoPain", 0)
+    ZSPO A 0 A_GiveInventory("ZSpecOpsSGSitRep", 1)
+    ZSPO A 0 A_JumpIfInventory("ZSpecOpAggressive", 1, "AggressiveSwitch")
+    ZSPO A 0 A_JumpIfInventory("ZSpecOpSprint", 1, "SprintSwitch")
+    ZSPO A 0 A_JumpIfInventory("ZSpecOpWander", 1, "WanderSwitch")
+    ZSPO A 0 A_JumpIfInventory("ZSpecOpCreep", 1, "CreepSwitch")
+    ZSPO A 0 A_JumpIfInventory("ZSpecOpBerserk", 1, "BerserkSwitch")
+
+  //Aggressive Mode
+  AggressiveSwitch:
+    ZSPO A 0 A_ChangeFlag("MissileMore", 1)
+    ZSPO A 0 A_ChangeFlag("MissileEvenMore", 1)
+    Goto AggressiveSee
+  AggressiveSee:
+    ZSPO A 3 A_Chase("", "AggressiveMissile")
+    ZSPO A 0 A_Jump(192, 2)
+    ZSPO A 0 A_JumpIfHealthLower(50, "See")
+    ZSPO A 0 A_Jump(32, 2)
+    ZSPO A 0 A_JumpIfCloser(768, 1)
+    Goto See
+    ZSPO A 3 A_Chase("", "AggressiveMissile")
+    ZSPO A 0 A_Jump(192, 2)
+    ZSPO A 0 A_JumpIfHealthLower(50, "See")
+    ZSPO A 0 A_Jump(32, 2)
+    ZSPO A 0 A_JumpIfCloser(768, 1)
+    Goto See
+    ZSPO B 3 A_Chase("", "AggressiveMissile")
+    ZSPO B 0 A_Jump(192, 2)
+    ZSPO B 0 A_JumpIfHealthLower(50, "See")
+    ZSPO B 0 A_Jump(32, 2)
+    ZSPO B 0 A_JumpIfCloser(768, 1)
+    Goto See
+    ZSPO B 3 A_Chase("", "AggressiveMissile")
+    ZSPO B 0 A_Jump(192, 2)
+    ZSPO B 0 A_JumpIfHealthLower(50, "See")
+    ZSPO B 0 A_Jump(32, 2)
+    ZSPO B 0 A_JumpIfCloser(768, 1)
+    Goto See
+    ZSPO C 3 A_Chase("", "AggressiveMissile")
+    ZSPO C 0 A_Jump(192, 2)
+    ZSPO C 0 A_JumpIfHealthLower(50, "See")
+    ZSPO C 0 A_Jump(32, 2)
+    ZSPO C 0 A_JumpIfCloser(768, 1)
+    Goto See
+    ZSPO C 3 A_Chase("", "AggressiveMissile")
+    ZSPO C 0 A_Jump(192, 2)
+    ZSPO C 0 A_JumpIfHealthLower(50, "See")
+    ZSPO C 0 A_Jump(32, 2)
+    ZSPO C 0 A_JumpIfCloser(768, 1)
+    Goto See
+    ZSPO D 3 A_Chase("", "AggressiveMissile")
+    ZSPO D 0 A_Jump(192, 2)
+    ZSPO D 0 A_JumpIfHealthLower(50, "See")
+    ZSPO D 0 A_Jump(32, 2)
+    ZSPO D 0 A_JumpIfCloser(768, 1)
+    Goto See
+    ZSPO D 3 A_Chase("", "AggressiveMissile")
+    ZSPO D 0 A_Jump(192, 2)
+    ZSPO D 0 A_JumpIfHealthLower(50, "See")
+    ZSPO D 0 A_Jump(32, 2)
+    ZSPO D 0 A_JumpIfCloser(768, 1)
+    Goto See
+    ZSPO A 0
+    Loop
+  AggressiveMissile:
+	ZSPO E 0 A_Jump(128, "Roll")
+    ZSPO EEE 4 A_FaceTarget
+    ZSPO F 0 Bright A_PlayWeaponSound("Weapons/ShotGF")
+    ZSPO F 2 Bright A_CustomBulletAttack(8, 6, 7, 4, "Bulletpuff")
+    ZSPO EEE 2 A_FaceTarget
+    Goto AggressiveSee
+
+  //Sprint Mode
+  SprintSwitch:
+    ZSPO A 0 A_ChangeFlag("NoPain", 1)
+    Goto SprintSee
+  SprintSee:
+    ZSPO A 2 A_Chase("", "")
+    ZSPO A 0 A_JumpIfCloser(384, "See")
+    ZSPO A 2 A_Chase("", "")
+    ZSPO A 0 A_JumpIfCloser(384, "See")
+    ZSPO B 2 A_Chase("", "")
+    ZSPO B 0 A_JumpIfCloser(384, "See")
+    ZSPO B 2 A_Chase("", "")
+    ZSPO B 0 A_JumpIfCloser(384, "See")
+    ZSPO C 2 A_Chase("", "")
+    ZSPO C 0 A_JumpIfCloser(384, "See")
+    ZSPO C 2 A_Chase("", "")
+    ZSPO C 0 A_JumpIfCloser(384, "See")
+    ZSPO D 2 A_Chase("", "")
+    ZSPO D 0 A_JumpIfCloser(384, "See")
+    ZSPO D 2 A_Chase("", "")
+    ZSPO D 0 A_JumpIfCloser(384, "See")
+    Loop
+
+  //Wander Mode
+  WanderSwitch:
+    ZSPO A 0 A_ClearTarget
+    Goto WanderSee
+  WanderSee:
+    ZSPO A 4 A_Wander
+    ZSPO A 0 A_LookEx(10, 0, 0, 0, 360, "See")
+    ZSPO A 4 A_Wander
+    ZSPO A 0 A_LookEx(10, 0, 0, 0, 360, "See")
+    ZSPO B 4 A_Wander
+    ZSPO A 0 A_LookEx(10, 0, 0, 0, 360, "See")
+    ZSPO B 4 A_Wander
+    ZSPO A 0 A_LookEx(10, 0, 0, 0, 360, "See")
+    ZSPO C 4 A_Wander
+    ZSPO A 0 A_LookEx(10, 0, 0, 0, 360, "See")
+    ZSPO C 4 A_Wander
+    ZSPO A 0 A_LookEx(10, 0, 0, 0, 360, "See")
+    ZSPO D 4 A_Wander
+    ZSPO A 0 A_LookEx(10, 0, 0, 0, 360, "See")
+    ZSPO D 4 A_Wander
+    ZSPO A 0 A_LookEx(10, 0, 0, 0, 360, "See")
+    Loop
+
+  //Creep Mode
+  CreepSwitch:
+    ZSPO A 0 A_ChangeFlag("MissileMore", 1)
+    ZSPO A 0 A_ChangeFlag("AvoidMelee", 1)
+    Goto CreepSee
+  CreepSee:
+    ZSPO A 0 A_CheckSight("CreepCheck")
+    ZSPO A 0 A_JumpIfHealthLower(50, "See")
+    ZSPO AABBCCDD 5 A_Chase("", "CreepMissile", 2)
+    Loop
+  CreepCheck:
+    ZSPO A 0 A_Jump(32, "See")
+    Goto CreepSee+1
+  CreepMissile:
+	ZSPO E 0 A_Jump(128, "Roll")
+    ZSPO EEE 4 A_FaceTarget
+    ZSPO F 0 Bright A_PlayWeaponSound("Weapons/ShotGF")
+    ZSPO F 2 Bright A_CustomBulletAttack(8, 6, 7, 4, "Bulletpuff")
+    ZSPO EEE 2 A_FaceTarget
+    Goto CreepSee
+
+  //Berserk Mode
+  BerserkSwitch:
+    ZSPO A 0 A_ChangeFlag("MissileMore", 1)
+    ZSPO A 0 A_ChangeFlag("MissileEvenMore", 1)
+    ZSPO A 0 A_ChangeFlag("NoPain", 1)
+    Goto BerserkSee
+  BerserkSee:
+    ZSPO AABBCCDD 3 A_Chase("", "BerserkMissile")
+    ZSPO A 0 A_JumpIfCloser(768, 1)
+    Goto See
+    ZSPO A 0
+    Loop
+  BerserkMissile:
+	ZSPO E 0 A_Jump(128, "Roll")
+    ZSPO EE 4 A_FaceTarget
+    ZSPO F 0 Bright A_PlayWeaponSound("Weapons/ShotGF")
+    ZSPO F 2 Bright A_CustomBulletAttack(8, 6, 7, 4, "Bulletpuff")
+    ZSPO EEE 2 A_FaceTarget
+    ZSPO F 0 A_Jump(192, "BerserkSee")
+    ZSPO F 0 A_MonsterRefire(40, "BerserkSee")
+    Loop
+
+	Roll:
+		ZSPO M 0 A_FaceTarget
+		ZSPO M 0 A_PlaySound("ZSO/Roll")
+		ZSPO M 0 A_Jump(128, "RollLeft")
+		goto RollRight
+	RollLeft:
+		ZSPO M 0 ThrustThing(angle*256/360+192, 12, 0, 0)
+		ZSPO MMMMMMMMMMMMMMMMM 1 A_SetRoll((roll + 20))
+		goto CrouchMissile
+	RollRight:
+		ZSPO M 0 ThrustThing(angle*256/360+64, 12, 0, 0)
+		ZSPO MMMMMMMMMMMMMMMMM 1 A_SetRoll((roll - 20))
+		goto CrouchMissile
+	CrouchMissile:
+		ZSPO M 0 A_SetRoll(0)
+		ZSPO MMM 4 A_FaceTarget
+		ZSPO N 0 BRIGHT A_PlayWeaponSound("Weapons/ShotGF")
+		ZSPO N 2 BRIGHT A_CustomBulletAttack(8, 6, 7, 4, "Bulletpuff")
+		ZSPO M 10
+		Goto See
+
+  //Misc hurting states
+  Pain:
+    ZSPO G 4
+    ZSPO G 4 A_Pain
+    ZSPO G 0 A_Jump(96, "See")
+    Goto WhatPainState
+  WhatPainState:
+    ZSPO G 0 A_JumpIfInventory("ZSpecOpAggressive", 1, "AggressiveSee")
+    ZSPO G 0 A_JumpIfInventory("ZSpecOpSprint", 1, "SprintSee")
+    ZSPO G 0 A_JumpIfInventory("ZSpecOpWander", 1, "WanderSee")
+    ZSPO G 0 A_JumpIfInventory("ZSpecOpCreep", 1, "CreepSee")
+    ZSPO G 0 A_JumpIfInventory("ZSpecOpBerserk", 1, "BerserkSee")
+    Goto AggressiveSee
+  Death:
+    ZSPO H 5
+    ZSPO I 5 A_Scream
+    ZSPO J 5
+    ZSPO K 5 A_NoBlocking
+    ZSPO L -1
+  Raise:
+    ZSPO LKJIH 5
+    Goto See
+  }
+}
+
+Actor ZSpecOpsSGSitRep : CustomInventory
+{
+  Inventory.MaxAmount 0
+  +Inventory.AutoActivate
+  States
+  {
+  Spawn:
+    TNT1 A 1
+    Fail
+
+  Use:
+    TNT1 A 0 A_JumpIfHealthLower(50, "LowHealth")
+    TNT1 A 0 A_CheckSight("OutOfSight")
+    TNT1 A 0 A_JumpIfCloser(384, "Close")
+  ChecksFailed:
+    TNT1 A 0 A_Jump(256, "AggressiveMode", "SprintMode")
+
+  LowHealth:
+    TNT1 A 0 A_CheckSight("LowHealthOutOfSight")
+    TNT1 A 0 A_JumpIfCloser(768, "LowHealthClose")
+    TNT1 A 0 A_Jump(256, "SprintMode", "BerserkMode")
+  LowHealthOutOfSight:
+    TNT1 A 0 A_JumpIfCloser(768, "LowHealthOutOfSightClose")
+    TNT1 A 0 A_Jump(256, "SprintMode", "CreepMode")
+  LowHealthOutOfSightClose:
+    TNT1 A 0 A_Jump(256, "CreepMode", "AggressiveMode", "BerserkMode")
+  LowHealthClose:
+    TNT1 A 0 A_Jump(256, "BerserkMode", "AggressiveMode")
+
+  OutOfSight:
+    TNT1 A 0 A_JumpIfCloser(384, "OutOfSightClose")
+    TNT1 A 0 A_Jump(256, "AggressiveMode", "WanderMode", "CreepMode")
+  OutOfSightClose:
+    TNT1 A 0 A_Jump(256, "AggressiveMode", "CreepMode")
+
+  Close:
+    TNT1 A 0 A_Jump(256, "AggressiveMode")
+
+  AggressiveMode:
+    TNT1 A 0 A_GiveInventory("ZSpecOpAggressive", 1)
+    Stop
+  SprintMode:
+    TNT1 A 0 A_GiveInventory("ZSpecOpSprint", 1)
+    Stop
+  WanderMode:
+    TNT1 A 0 A_GiveInventory("ZSpecOpWander", 1)
+    Stop
+  CreepMode:
+    TNT1 A 0 A_GiveInventory("ZSpecOpCreep", 1)
+    Stop
+  BerserkMode:
+    TNT1 A 0 A_GiveInventory("ZSpecOpBerserk", 1)
+    Stop
+  }
+}
+
+Actor ZSpecOpAggressive : Inventory { Inventory.MaxAmount 1 }
+Actor ZSpecOpSprint : Inventory { Inventory.MaxAmount 1 }
+Actor ZSpecOpWander : Inventory { Inventory.MaxAmount 1 }
+Actor ZSpecOpCreep : Inventory { Inventory.MaxAmount 1 }
+Actor ZSpecOpBerserk : Inventory { Inventory.MaxAmount 1 }
+
+ACTOR CPDASGGuy
+{
+    Health 75
+    Radius 20
+    Height 56
+    Speed 8
+    PainChance 128
+    MONSTER
+    +FLOORCLIP
+    SeeSound "grunt/sight"
+    AttackSound "asgguy/asgfir"
+    PainSound "grunt/pain"
+    DeathSound "grunt/death"
+    ActiveSound "grunt/active"
+    Obituary "%o got emmenthal'd by an Auto-Shotgun Guy."
+    DropItem Shell
+	Tag "Auto-Shotgun Guy"
+    States
+    {
+    Spawn:
+        ASGZ AB 10 A_Look
+        Loop
+    See:
+        ASGZ AABBCCDD 4 A_Chase
+        Loop
+    Missile:
+    	ASGZ E 4 A_FaceTarget
+    	TNT1 A 0 A_GiveInventory ("ASGZAmmo", 1)
+    	ASGZ F 5 Bright A_CustomBulletAttack (5, 4, 3, 4, "BulletPuff", 0)
+    	ASGZ E 6
+    	TNT1 A 0 A_JumpIfInventory ("ASGZAmmo", 16, "Reload")
+    	TNT1 A 0 A_PlaySound("asgguy/asgld1")
+    	ASGZ E 0 A_Jump(100,"See")
+        Goto Missile
+    Reload:
+    	TNT1 A 0 A_ChangeFlag("NoPain", 1)
+    	TNT1 A 0 A_PlaySound("asgguy/asgout")
+    	ASGZ E 48 A_TakeInventory ("ASGZAmmo", 16)
+    	ASGZ E 8 A_PlaySound("asgguy/asgin")
+    	TNT1 A 0 A_ChangeFlag("NoPain", 0)
+    	Goto See
+    Pain:
+        ASGZ G 3
+        ASGZ G 3 A_Pain
+        Goto See
+    Death:
+        ASGZ H 5
+        ASGZ I 5 A_Scream
+        ASGZ J 5 A_Fall
+        ASGZ KLM 5
+        ASGZ N -1
+        Stop
+    XDeath:
+        ASGZ O 5
+        ASGZ P 5 A_XScream
+        ASGZ Q 5 A_Fall
+        ASGZ RSTUV 5
+        ASGZ W -1
+        Stop
+    Raise:
+        ASGZ NMLKJIH 5
+        Goto See
+    }
+}
+
+ACTOR ASGZAmmo: Inventory
+{
+     Inventory.MaxAmount 16
+}
+
+ACTOR CPDSSGZombie
+{
+	Health 80
+	Radius 20
+	Height 56
+	Scale 0.9
+	Speed 9
+	PainChance 170
+	MONSTER 
+	+FloorClip
+	SEESOUND "SSGUNER/sight"
+	ATTACKSOUND "SSGUNER/SSG"
+	PAINSOUND "grunt/pain"
+	DEATHSOUND "SSGUNER/death"
+	ACTIVESOUND "SSGUNER/idle"
+	OBITUARY "%o was blown open by a Super Shotgun Zombie."
+	DropItem "Shell"
+	DropItem "SuperShotgun" 32
+	Decal Bulletchip
+	Tag "Super Shotgun Zombie"
+	states
+	{
+	Spawn:
+		GPOS A 10 A_Look
+		Loop
+	See:
+		GPOS AABBCCDD 4 A_Chase
+		Loop
+	Missile:
+		GPOS E 10 A_FaceTarget
+		GPOS F 8 BRIGHT A_CustomBulletAttack(11.2, 7.1, 20, 3, "Bulletpuff")
+		GPOS E 8
+		Goto See
+	Pain:
+		GPOS G 3
+		GPOS G 3 A_Pain
+		Goto See
+	Death:
+		GPOS H 7
+		GPOS I 7 A_Scream
+		GPOS J 7 A_NoBlocking
+		GPOS K 7
+		GPOS L 7
+		GPOS M 7
+		GPOS N -1
+		Stop
+	XDeath:
+		GPOS O 5
+		GPOS P 5 A_XScream
+		GPOS Q 5 A_NoBlocking
+		GPOS RS 5
+		GPOS T -1
+		Stop
+	Raise:
+		GPOS NMLKJIH 5
+		Goto See
+	}
+}
+
+Actor CPDQuadShotgunZombie
+{
+  Health 100
+  Radius 20
+  Height 56
+  Mass 100
+  Speed 8
+  PainChance 60
+  Monster
+  +FloorClip
+  SeeSound "ShotGuy/Sight"
+  PainSound "ShotGuy/Pain"
+  DeathSound "ShotGuy/Death"
+  ActiveSound "ShotGuy/Active"
+  Obituary "%o was smeared by a Quad-Shotgun Guy."
+  DropItem "Shell"
+  Tag "Quad-Shotgun Guy"
+  States
+  {
+  Spawn:
+    QSZM AAAAAAAAAABBBBBBBBBB 1 A_Look
+    Loop
+  See:
+    QSZM AABBCCDD 3 A_Chase
+    Loop
+  Missile:
+    QSZM E 0 A_JumpIfInventory("QuadShotgunZombieCounter", 1, "SingleShot")
+    QSZM E 0 A_Jump(64, "QuadShot")
+    Goto SingleShot
+  SingleShot:
+    QSZM EE 5 A_FaceTarget
+    QSZM F 0 Bright A_PlayWeaponSound("QuadShotgunZombie/SingleFire")
+    QSZM F 0 Bright A_GiveInventory("QuadShotgunZombieCounter", 1)
+    QSZM F 4 Bright A_CustomBulletAttack(6, 6, 5, 3, "Bulletpuff")
+    QSZM E 6 A_FaceTarget
+    QSZM E 0 A_JumpIfInventory("QuadShotgunZombieCounter", 4, "Reload")
+    QSZM E 0 A_Jump(96, "SingleShot")
+    QSZM EE 6 A_FaceTarget
+    Goto See
+  QuadShot:
+    QSZM E 0 A_JumpIfCloser(384, 1)
+    Goto SingleShot
+    QSZM EEE 5 A_FaceTarget
+    QSZM F 0 Bright A_PlayWeaponSound("QuadShotgunZombie/QuadFire")
+    QSZM F 0 Bright A_GiveInventory("QuadShotgunZombieCounter", 4)
+    QSZM F 4 Bright A_CustomBulletAttack(11, 11, 20, 3, "Bulletpuff")
+    QSZM EE 6 A_FaceTarget
+    Goto Reload
+  Reload:
+    QSZM E 0 A_ChangeFlag("NoPain", 1)
+    QSZM E 10 A_PlaySoundEx("QuadShotgunZombie/Reload1", "SoundSlot7", 0)
+    QSZM E 0 A_TakeInventory("QuadShotgunZombieCounter", 1)
+    QSZM E 10 A_PlaySoundEx("QuadShotgunZombie/Reload2", "SoundSlot6", 0)
+    QSZM E 0 A_JumpIfInventory("QuadShotgunZombieCounter", 1, 1)
+    Goto Reload+6
+    QSZM E 0
+    Goto Reload+2
+    QSZM E 10 A_PlaySoundEx("QuadShotgunZombie/Reload3", "SoundSlot7", 0)
+    QSZM E 0 A_ChangeFlag("NoPain", 0)
+    Goto See
+  Pain:
+    QSZM G 3
+    QSZM G 3 A_Pain
+    Goto See
+  Death:
+    QSZM H 8
+    QSZM I 8 A_Scream
+    QSZM J 8 A_NoBlocking
+    QSZM K 8
+    QSZM L -1
+    Stop
+  XDeath:
+    QSZM M 5
+    QSZM N 5 A_XScream
+    QSZM O 5 A_NoBlocking
+    QSZM PQRST 5
+    QSZM U -1
+    Stop
+  Raise:
+    QSZM L 5
+    QSZM KJIH 5
+    Goto See
+  }
+}
+
+Actor QuadShotgunZombieCounter : Inventory
+{
+  Inventory.MaxAmount 4
+}
+
+Actor CPDNailBorg
+{
+	OBITUARY "%o was nailed by a Nailgun Cyborg."
+	Health 90
+	Radius 20
+	Height 56
+	Mass 135
+	Speed 15
+	Painchance 80
+	Scale 1.2
+	SEESOUND "Monsters/NBSight"
+	ACTIVESOUND "Monsters/NBAct"
+	PAINSOUND "Monsters/NBPain"
+	DEATHSOUND "Monsters/NBDeath"
+	Translation 1
+	Bloodcolor "7F 3F 00"
+	DropItem "Shell" 128
+	DropItem "Clip" 128
+	MONSTER
+	+FLOORCLIP
+	Tag "Nailgun Cyborg"
+	States
+	{
+	Spawn:
+		NLBG AB 10 A_Look
+		Loop
+	See:
+		NLBG AA 4 A_Chase
+		NLBG A 0 A_PlaySound("Monsters/NBWalk")
+		NLBG BBCC 4 A_Chase
+		NLBG CC 0 A_PlaySound("Monsters/NBWalk")
+		NLBG DD 4 A_Chase
+		Loop
+	Missile:
+      		NLBG E 0 A_Jump(96, 27)
+      		NLBG E 0 A_Jump(96, 34)
+      		NLBG E 10 A_FaceTarget
+      		NLBG E 0 A_PlaySound("weapons/nailfire")
+      		NLBG F 3 BRIGHT A_CustomMissile("BorgNail1", 32, 0, Random(6, -6), 0, 1)
+      		NLBG E 1 BRIGHT
+                NLBG E 0 A_PlaySound("weapons/nailfire")
+      		NLBG F 3 BRIGHT A_CustomMissile("BorgNail1", 32, 0, Random(6, -6), 0, 1)
+      		NLBG E 1 BRIGHT A_FaceTarget
+      		NLBG E 0 A_PlaySound("weapons/nailfire")
+      		NLBG F 3 BRIGHT A_CustomMissile("BorgNail1", 32, 0, Random(6, -6), 0, 1)
+      		NLBG E 1 BRIGHT A_FaceTarget
+      		NLBG E 0 A_PlaySound("weapons/nailfire")
+      		NLBG F 3 BRIGHT A_CustomMissile("BorgNail1", 32, 0, Random(6, -6), 0, 1)
+      		NLBG E 1 BRIGHT A_FaceTarget
+      		NLBG E 0 A_PlaySound("weapons/nailfire")
+      		NLBG F 3 BRIGHT A_CustomMissile("BorgNail1", 32, 0, Random(6, -6), 0, 1)
+      		NLBG E 1 BRIGHT A_FaceTarget
+      		NLBG E 0 A_PlaySound("weapons/nailfire")
+      		NLBG F 3 BRIGHT A_CustomMissile("BorgNail1", 32, 0, Random(6, -6), 0, 1)
+      		NLBG E 1 BRIGHT A_FaceTarget
+      		NLBG E 0 A_PlaySound("weapons/nailfire")
+      		NLBG F 3 BRIGHT A_CustomMissile("BorgNail1", 32, 0, Random(6, -6), 0, 1)
+      		NLBG E 1 BRIGHT A_FaceTarget
+      		NLBG E 0 A_PlaySound("weapons/nailfire")
+      		NLBG F 3 BRIGHT A_CustomMissile("BorgNail1", 32, 0, Random(6, -6), 0, 1)
+      		NLBG E 1 BRIGHT
+      		Goto See
+      		NLBG E 10 A_FaceTarget
+      		NLBG E 0 A_PlaySound("weapons/nailfire")
+      		NLBG F 4 A_CustomMissile("BorgNail2", 28, 0, 4, 0, 1)
+      		NLBG F 0 A_CustomMissile("BorgNail2", 28, 0, -4, 0, 1)
+      		NLBG F 0 A_CustomMissile("BorgNail2", 36 ,0 ,4 , 0, 1)
+      		NLBG F 0 A_CustomMissile("BorgNail2", 36, 0, -4, 0, 1)
+      		NLBG F 0 BRIGHT A_CustomMissile("BorgCenterNail", 32, 0, 0, 0)
+      		NLBG E 15
+      		Goto See
+      		NLBG E 10 A_FaceTarget
+      		NLBG E 0 A_PlaySound("Weapons/NailBomb")
+      		NLBG F 4 A_CustomMissile("BorgNailBomb", 32, 0, Random(6, -6), 0)
+      		NLBG E 10
+      		Goto See
+	Pain:
+		NLBG G 3
+		NLBG G 3 A_Pain
+		Goto See
+	Death:
+		NLBG H 5
+		NLBG I 5 A_Scream
+		NLBG J 5 A_NoBlocking
+		NLBG J 0 A_PlaySound("Weapons/NailBomb")
+		NLBG K 5 A_CustomMissile("BorgNailBombBig", 32, 0, Random(6, -6), 0)
+		NLBG L -1
+		Stop
+	XDeath:
+		NLBG O 5
+		NLBG P 5 A_XScream
+		NLBG Q 5 A_NoBlocking
+		NLBG Q 0 A_PlaySound("Weapons/NailBomb")
+		NLBG RTUV 5 A_CustomMissile("BorgNailBombBig", 32, 0, Random(6, -6), 0)
+		NLBG W -1
+		Stop
+	Raise:
+		NLBG KJIH 5
+		Goto See
+	}
+}
+		
+Actor BorgNailBomb
+{
+	Radius 24
+	Height 24
+	Speed 20
+	Reactiontime 35
+	SEESOUND "Weapons/NBBounce"
+	DEATHSOUND "Weapons/NailBombExp"
+	PROJECTILE
+	-SHOOTABLE
+	+DOOMBOUNCE
+	+RANDOMIZE
+	+GRENADETRAIL
+	-NOGRAVITY
+	+CANBOUNCEWATER
+	+BOUNCEONACTORS
+	states
+	{
+	Spawn:
+		NBMB A 2 A_Countdown
+		NBMB AB 6
+		Loop
+	Death:
+		WSMK E 0 A_CustomMissile("BorgNail1", 4, 2, 0)
+		WSMK E 0 A_CustomMissile("BorgNail1", 4, 2, 40)
+		WSMK E 0 A_CustomMissile("BorgNail1", 4, 2, 80)
+		WSMK E 0 A_CustomMissile("BorgNail1", 4, 2, 120)
+		WSMK E 0 A_CustomMissile("BorgNail1", 4, 2, 160)
+		WSMK E 0 A_CustomMissile("BorgNail1", 4, 2, 200)
+		WSMK E 0 A_CustomMissile("BorgNail1", 4, 2, 240)
+		WSMK E 0 A_CustomMissile("BorgNail1", 4, 2, 280)
+		WSMK E 0 A_CustomMissile("BorgNail1", 4, 2, 320)
+		WSMK E 0 A_CustomMissile("BorgNail1", 4, 2, 350)
+		WSMK ABCDE 5
+		Stop
+	}
+}
+
+Actor BorgNailBombBig
+{
+	Radius 24
+	Height 24
+	Speed 20
+	Reactiontime 35
+	SEESOUND "Weapons/NBBounce"
+	DEATHSOUND "Weapons/NailBombExp"
+	Scale 1.4
+	PROJECTILE
+	-SHOOTABLE
+	+DOOMBOUNCE
+	+RANDOMIZE
+	+GRENADETRAIL
+	-NOGRAVITY
+	+CANBOUNCEWATER
+	+BOUNCEONACTORS
+	states
+	{
+	Spawn:
+		NBMB A 2 A_Countdown
+		NBMB AB 6
+		Loop
+	Death:
+		WSMK E 0 A_CustomMissile("BorgNail1", 4, 2, 0)
+		WSMK E 0 A_CustomMissile("BorgNail1", 4, 2, 20)
+		WSMK E 0 A_CustomMissile("BorgNail1", 4, 2, 40)
+		WSMK E 0 A_CustomMissile("BorgNail1", 4, 2, 60)
+		WSMK E 0 A_CustomMissile("BorgNail1", 4, 2, 80)
+		WSMK E 0 A_CustomMissile("BorgNail1", 4, 2, 100)
+		WSMK E 0 A_CustomMissile("BorgNail1", 4, 2, 120)
+		WSMK E 0 A_CustomMissile("BorgNail1", 4, 2, 140)
+		WSMK E 0 A_CustomMissile("BorgNail1", 4, 2, 160)
+		WSMK E 0 A_CustomMissile("BorgNail1", 4, 2, 180)
+		WSMK E 0 A_CustomMissile("BorgNail1", 4, 2, 200)
+		WSMK E 0 A_CustomMissile("BorgNail1", 4, 2, 220)
+		WSMK E 0 A_CustomMissile("BorgNail1", 4, 2, 240)
+		WSMK E 0 A_CustomMissile("BorgNail1", 4, 2, 260)
+		WSMK E 0 A_CustomMissile("BorgNail1", 4, 2, 280)
+		WSMK E 0 A_CustomMissile("BorgNail1", 4, 2, 300)
+		WSMK E 0 A_CustomMissile("BorgNail1", 4, 2, 320)
+		WSMK E 0 A_CustomMissile("BorgNail1", 4, 2, 340)
+		WSMK ABCDE 5
+		Stop
+	}
+}
+
+Actor BorgNail1
+{
+        Projectile
+        Radius 5
+        Height 8
+        Speed 32
+        Damage 3
+        Scale 0.6
+        +BLOODSPLATTER
+        seeSound ""
+        DeathSound ""
+        Decal Bulletchip
+        States
+        {
+        Spawn:
+                DART A 1 A_CustomMissile("NailBlur", 0, 0, 180)
+        	DART A 0 A_PlaySound("weapons/nailflight")
+               	Loop
+        Crash:
+        	DART B 0 A_PlaySound("weapons/nailhit")
+        	DART BCDEFG 2
+        	Stop
+        XDeath:
+        	DART B 0 A_PlaySound("weapons/nailhitbleed")
+        	DART BCDEFG 2
+        	Stop
+        Death:
+        	DART B 0 A_PlaySound("weapons/nailhit")
+        	DART BCDEFG 2
+        	Stop
+        }
+}
+
+Actor BorgNail2
+{
+        Projectile
+        Radius 6
+        Height 8
+        Speed 30
+        Damage 2
+        Scale 0.6
+        +BLOODSPLATTER
+        seeSound ""
+        DeathSound ""
+        Decal Bulletchip
+        States
+        {
+        Spawn:
+                DART A 1 A_SpawnItemEx("NailBlur", 0, 0, 0, 0.2, 0, 0, 180, 128)
+        	DART A 0 A_PlaySound("weapons/nailflight")
+		DART A 1 A_SpawnItemEx("NailBlur", 0, 0, 0, 0.2, 0, 0, 180, 128)
+               	Loop
+        Crash:
+        	DART B 0 A_PlaySound("weapons/nailhit")
+        	DART BCDEFG 2
+        	Stop
+        XDeath:
+        	DART B 0 A_PlaySound("weapons/nailhitbleed")
+        	DART BCDEFG 2
+        	Stop
+        Death:
+        	DART B 0 A_PlaySound("weapons/nailhit")
+        	DART BCDEFG 2
+        	Stop
+        }
+}
+
+Actor BorgCenterNail
+{
+        Projectile
+        Radius 6
+        Height 8
+        Speed 26
+        Damage 3
+        +BLOODSPLATTER
+        seeSound ""
+        DeathSound ""
+        Decal Bulletchip
+        States
+        {
+        Spawn:
+                DART A 1 A_SpawnItemEx("NailBlur", 0, 0, 0, 0.2, 0, 0, 180, 128)
+        	DART A 0 A_PlaySound("weapons/nailflight")
+		DART A 1 A_SpawnItemEx("NailBlur", 0, 0, 0, 0.2, 0, 0, 180, 128)
+               	Loop
+        Crash:
+        	DART B 0 A_PlaySound("weapons/nailhit")
+        	DART BCDEFG 2
+        	Stop
+        XDeath:
+        	DART B 0 A_PlaySound("weapons/nailhitbleed")
+        	DART BCDEFG 2
+        	Stop
+        Death:
+        	DART B 0 A_PlaySound("weapons/nailhit")
+        	DART BCDEFG 2
+        	Stop
+        }
+}
+
+Actor NailBlur       
+{
+   Height 8
+   Radius 1
+   Damage 0
+   Scale 0.6
+   Speed 0.2
+   RenderStyle Translucent
+   Alpha 0.5
+   +NOGRAVITY
+   +DROPOFF
+   States
+   {
+   Spawn:
+      DART A 1 A_FadeOut(0.1)
+      Loop
+   }
+}
+
+
+actor CPDBeamGuy
+{
+  obituary "%o was cauterised by a Beam Zombie."
+  health 80
+  radius 20
+  height 56
+  mass 100
+  speed 8
+  painchance 200
+  seesound "grunt/sight"
+  attacksound "grunt/attack"
+  painsound "grunt/pain"
+  deathsound "grunt/death"
+  activesound "grunt/active"
+  dropitem "Cell" 192
+  MaxTargetRange 1024
+  MONSTER
+  +FLOORCLIP
+  Tag "Beam Zombie"
+  states
+  {
+  Spawn:
+    ZBAM A 0 A_StopSoundEx (soundslot7)
+    ZBAM AB 10 A_Look
+    loop
+  See:
+    ZBAM A 0 A_StopSoundEx (soundslot7)
+    ZBAM AABBCCDD 4 A_Chase
+    loop
+  Missile:
+    ZBAM E 0 A_Jump (256, "Right", "Left")
+    stop
+    
+  Right:
+    ZBAM E 10 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, -6, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 0 A_PlaySoundEx ("BeamGuy/Attack", soundslot7, 1)
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, -5.75, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, -5.5, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, -5.25, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, -5, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, -4.75, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, -4.5, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, -4.25, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, -4, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, -3.75, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, -3.5, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, -3.25, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, -3, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, -2.75, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, -2.5, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, -2.25, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, -2, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, -1.75, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, -1.5, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, -1.25, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, -1, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, -0.75, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, -0.5, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, -0.25, 1)
+    ZBAM F 0 A_FaceTarget
+    goto LockedOn
+    
+  Left:
+    ZBAM E 10 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, 6, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 0 A_PlaySoundEx ("BeamGuy/Attack", soundslot7, 1)
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, 5.75, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, 5.5, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, 5.25, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, 5, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, 4.75, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, 4.5, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, 4.25, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, 4, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, 3.75, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, 3.5, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, 3.25, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, 3, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, 2.75, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, 2.5, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, 2.25, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, 2, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, 1.75, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, 1.5, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, 1.25, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, 1, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, 0.75, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, 0.5, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, 0.25, 1)
+    ZBAM F 0 A_FaceTarget
+    goto LockedOn
+    
+  LockedOn:
+    ZBAM F 1 bright A_CustomMissile ("PlasmaBeamBall", 40, 8, 0, 1)
+    ZBAM F 0 A_FaceTarget
+    ZBAM F 0 A_Jump (8, "See")
+    ZBAM F 0 A_CPosRefire
+    goto LockedOn
+  Pain:
+    ZBAM G 3 A_StopSoundEx (soundslot7)
+    ZBAM G 3 A_Pain
+    goto See
+  Death:
+    ZBAM H 5 A_StopSoundEx (soundslot7)
+    ZBAM I 5 A_Scream
+    ZBAM J 5 A_NoBlocking
+    ZBAM K 5
+    ZBAM L -1
+    stop
+  XDeath:
+    POSS M 5 A_StopSoundEx (soundslot7)
+    POSS N 5 A_XScream
+    POSS O 5 A_NoBlocking
+    POSS PQRST 5
+    POSS U -1
+    stop
+  Raise:
+    ZBAM KJIH 5
+    goto See
+  }
+}
+
+
+ACTOR PlasmaBeamBall : FastProjectile
+{
+  Speed 200
+  Radius 13
+  Height 8
+  Damage (1)
+  Decal DoomImpScorch
+  MissileType PlasmaBeamTrail
+  Deathsound "Beamguy/Hit"
+  -CANNOTPUSH
+  -NODAMAGETHRUST
+  states
+  {
+  Death:
+    TNT1 A 4
+    stop
+  }
+}
+
+ACTOR PlasmaBeamTrail
+{
+  RenderStyle Add
+  Scale 0.25
+  +NOINTERACTION
+  States
+  {
+  Spawn:
+    APBX B 0 
+    APBX B 0 A_Jump (256, "B", "C", "D")
+    stop
+  B:
+    APBX B 2 bright
+    stop
+  C:
+    APBX C 2 bright
+    stop
+  D:
+    APBX D 2 bright
+    stop  
+  }
+}
